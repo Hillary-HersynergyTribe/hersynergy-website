@@ -85,42 +85,74 @@ const brands = [
 export default function Home() {
   return (
     <>
-      <section className="bg-[url(/png/hero-section.png)] bg-[auto_110%] lg:bg-cover bg-center w-screen h-[95vh] px-24px">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 0.3,
-              delay: 0,
-              ease: [0.12, 0, 0, 1],
-            },
-          }}
-          viewport={{
-            amount: "some",
-            once: true,
-          }}
-          className="h-full w-full flex flex-col gap-32px lg:gap-64px items-center justify-center"
-        >
-          <h1 className="text-32 lg:text-48 text-white font-bold max-w-748px w-full text-center">
+      <section className="bg-[url(/png/hero-section.png)] bg-[auto_110%] lg:bg-cover bg-center w-full h-[95vh] px-24px">
+        <div className="h-full w-full flex flex-col gap-32px lg:gap-64px items-center justify-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.3,
+                delay: 0,
+                ease: [0.12, 0, 0, 1],
+              },
+            }}
+            viewport={{
+              amount: "some",
+              once: true,
+            }}
+            className="text-32 lg:text-48 text-white font-bold max-w-748px w-full text-center"
+          >
             Where Ambition Meets The Support It Deserves
-          </h1>
+          </motion.h1>
 
-          <p className="text-18 lg:text-28 text-white max-w-936px w-full text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.3,
+                delay: 0,
+                ease: [0.12, 0, 0, 1],
+              },
+            }}
+            viewport={{
+              amount: "some",
+              once: true,
+            }}
+            className="text-18 lg:text-28 text-white max-w-936px w-full text-center"
+          >
             The premier community equipping women to navigate mid - senior level
             careers with confidence and connection
-          </p>
+          </motion.p>
 
-          <div className="flex items-center gap-24px">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.3,
+                delay: 0,
+                ease: [0.12, 0, 0, 1],
+              },
+            }}
+            viewport={{
+              amount: "some",
+              once: true,
+            }}
+            className="flex items-center gap-24px"
+          >
             <button className="bg-violet-500 rounded-4xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px">
               Join Now
             </button>
             <button className="bg-white rounded-4xl text-violet-500 font-bold text-16 w-fit px-24px py-16px mt-24px">
               Partner with Us
             </button>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </section>
 
       <section className="p-24px lg:p-80px bg-white">
@@ -174,38 +206,53 @@ export default function Home() {
                 Learn More
               </button>
             </div>
-            <div className="max-w-600px order-1 nav:order-2">
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.8,
+                  delay: 0,
+                  ease: [0.44, 0, 0, 1],
+                },
+              }}
+              viewport={{
+                amount: "some",
+                once: true,
+              }}
+              className="max-w-600px order-1 nav:order-2"
+            >
               <img src="/png/our-story.png" alt="our story" />
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </section>
 
       <section>
-        <motion.div
-          initial={{ opacity: 0, y: 0 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 0.8,
-              delay: 0,
-              ease: [0.44, 0, 0, 1],
-            },
-          }}
-          viewport={{
-            amount: "some",
-            once: true,
-          }}
-          className="p-24px lg:py-80px flex flex-col gap-32px bg-black-50"
-        >
+        <div className="p-24px lg:py-80px flex flex-col gap-32px bg-black-50">
           <h1 className="text-24 lg:text-36 text-violet-700 font-bold text-center">
             Promoting the Next Level of Women in Tech
           </h1>
 
           <div className="flex gap-24px items-center justify-center flex-wrap">
-            {promotingCards.map((card) => (
-              <div
+            {promotingCards.map((card, i) => (
+              <motion.div
+                initial={{ opacity: 0, y: 12 * (i + 1) }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.8,
+                    delay: 0,
+                    ease: [0, 0, 0, 1],
+                  },
+                }}
+                viewport={{
+                  amount: "some",
+                  once: true,
+                }}
                 key={card.title}
                 className="p-24px bg-white-500 rounded-lg flex flex-col items-center justify-center gap-16px lg:max-w-360px w-full transition-all duration-500 ease-in-out hover:cursor-pointer hover:shadow-popUp"
               >
@@ -216,10 +263,10 @@ export default function Home() {
                 <p className="text-16 font-georgia text-center lg:max-w-288px w-full">
                   {card.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       <div className="bg-violet-600 p-24px lg:py-80px flex flex-col gap-32px">

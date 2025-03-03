@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -45,8 +44,8 @@ export const Header = () => {
 
   return (
     <header>
-      <nav className="w-full py-16px px-24px nav:px-80px z-50 fixed bg-white-100 shadow">
-        <div className="flex justify-between items-center">
+      <nav className="w-full py-16px px-24px z-50 fixed bg-white-100 shadow">
+        <div className="flex justify-between items-center max-w-[1280px] w-full mx-auto">
           <button
             className="block absolute lg:hidden"
             onClick={() => setShowMenu(!showMenu)}

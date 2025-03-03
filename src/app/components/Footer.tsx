@@ -38,8 +38,8 @@ const socialLinks = [
 ];
 export const Footer = () => {
   return (
-    <div className="bg-white p-24px nav:p-80px">
-      <div className="flex items-start justify-between flex-wrap max-w-[1280px] w-full gap-24px">
+    <div className="bg-white p-24px">
+      <div className="flex items-start justify-between flex-wrap gap-24px max-w-[1280px] w-full mx-auto">
         <div className="lg:max-w-192px w-full">
           <div className="flex flex-col gap-12px mb-24px lg:mb-40px">
             <Link href="/">
