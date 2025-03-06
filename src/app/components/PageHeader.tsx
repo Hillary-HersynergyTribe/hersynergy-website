@@ -11,6 +11,7 @@ export const PageHeader = ({
     events: "bg-[url(/png/events-header.png)]",
     partnerships: "bg-[url(/png/partnerships-header.png)]",
     mentorship: "bg-[url(/png/mentorship-header.png)]",
+    membership: "bg-[url(/png/membership-header.png)]",
   };
 
   return (

@@ -10,7 +10,7 @@ const missions = [
 const partnershipOpportunities = [
   {
     title: "Corporate Partnership Opportunities",
-    bg: "",
+    bg: "bg-violet-50",
     opportunities: [
       {
         img: "corporate-partnership-opportunities-1",
@@ -34,14 +34,14 @@ const partnershipOpportunities = [
     opportunities: [
       {
         img: "volunteer-opportunities-1",
-        class: "",
+        class: "bg-red-100 border border-violet-500",
         title: "Leadership & Coaching",
         description:
           "If you have 10+ years of experience, we’d love for you to share your knowledge and guidance with our members as a mentor and coach, helping them navigate their careers.",
       },
       {
         img: "volunteer-opportunities-2",
-        class: "",
+        class: "bg-white-600 border border-violet-500",
         title: "mentor",
         description:
           "With 3+ years of professional experience, you can make a difference by mentoring early-career women and the communities we collaborate with. HerSynergy membership required.",
@@ -54,14 +54,14 @@ const partnershipOpportunities = [
     opportunities: [
       {
         img: "support-our-impact-1",
-        class: "",
+        class: "bg-blue-100 border border-violet-500",
         title: "Contribute to Social Impact",
         description:
           "Help us create lasting change, by donating to the causes that empower women and support the growth of our community.",
       },
       {
         img: "support-our-impact-2",
-        class: "",
+        class: "bg-violet-50 border border-violet-500",
         title: "Show Appreciation to Our Founders",
         description:
           "Celebrate the work and dedication of our Founders by contributing to a thoughtful gift that acknowledge their ongoing commitment to our mission.",
@@ -125,6 +125,39 @@ const PartnershipsPage = () => {
           </button>
         </div>
       </section>
+
+      {partnershipOpportunities.map((oppurtunity) => (
+        <section
+          key={oppurtunity.title}
+          className={`p-24px lg:p-80px ${oppurtunity.bg}`}
+        >
+          <div className="max-w-[1128px] mx-auto">
+            <div className="border border-violet-500 rounded-xl p-8px mb-24px">
+              <h2 className="font-bold text-20 lg:text-24 text-violet-500">
+                {oppurtunity.title}
+              </h2>
+            </div>
+
+            <div className="flex gap-24px">
+              {oppurtunity.opportunities.map((o) => (
+                <div
+                  key={o.img}
+                  className={`rounded-xl flex flex-col gap-24px p-24px ${o.class}`}
+                >
+                  <img
+                    src={`/png/${o.img}.png`}
+                    alt={o.img}
+                    className="h-100px w-fit"
+                  />
+
+                  <h2 className="text-18 lg:text-24 font-bold">{o.title}</h2>
+                  <p className="text-14 lg:text-18">{o.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
     </>
   );
 };

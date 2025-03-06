@@ -23,7 +23,12 @@ const menuItems = [
   {
     name: "Events",
     route: "/events",
-    children: [{ name: "UnleashHer Potential Summit", route: "/" }],
+    children: [
+      {
+        name: "UnleashHer Potential Summit",
+        route: "/events/unleashher-potential-summit",
+      },
+    ],
   },
   {
     name: "Newsletter",
@@ -105,7 +110,11 @@ export const Header = () => {
           </button>
 
           <Link href="/" className="ml-40px w-150px lg:ml-0">
-            <img src="/svg/logo.svg" alt="hersynergy logo" className="w-full" />
+            <img
+              src="/svg/new-logo.svg"
+              alt="hersynergy logo"
+              className="w-full"
+            />
           </Link>
 
           <ul
