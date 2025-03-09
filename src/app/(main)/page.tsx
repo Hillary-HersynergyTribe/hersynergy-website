@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion, AnimatePresence, animate } from "framer-motion";
+import { Testimonials } from "../components/Testimonials";
 
 const fuelingGrowthCards = [
   {
@@ -82,6 +83,7 @@ const brands = [
   { name: "ayden", link: "" },
   { name: "norebase", link: "" },
 ];
+
 export default function Home() {
   return (
     <>
@@ -327,8 +329,14 @@ export default function Home() {
           </button>
         </div>
       </div>
-
       {/* membership spotlight */}
+      <section className="py-48px lg:py-80px bg-blue-50">
+        <h1 className="text-24 lg:text-36 text-white-50 font-bold text-center mb-48px">
+          What Members Have To Say
+        </h1>
+        <Testimonials></Testimonials>
+      </section>
+
       <div className="px-24px py-48px lg:p-80px bg-[url(/png/newsletterSection.png)] bg-cover">
         <div className="bg-violet-50 rounded-lg p-24px lg:p-48px flex flex-col items-center justify-center gap-24px mx-auto max-w-794px w-full">
           <h1 className="text-24 lg:text-36 text-violet-500 font-bold text-center">
@@ -359,8 +367,6 @@ export default function Home() {
           </form>
         </div>
       </div>
-
-     
     </>
   );
 }

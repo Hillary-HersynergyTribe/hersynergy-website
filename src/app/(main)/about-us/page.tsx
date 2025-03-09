@@ -44,11 +44,43 @@ const conversations = [
   Also big thanks to <span className="!text-green-700">@Hillary</span> and <span className="!text-green-700">@Tolu Ajibola</span> for creating this group. You’re adding so so much valueeeee...”`,
   `“I lhad such an amazing time! Thank you so much all for the vulnerability with sharing your stories from Tochi’s story to learning “scaring efficient” to our crypto argument. It was really the best way to end the year for me. Looking forward to our wins in 2025 and more physical meet ups.”`,
   `“Thank you <span className="!text-green-700">@Hillary Omitogun</span> and <span className="!text-green-700">@Tolu A.</span>  for organising and driving this! The kids were really excited to receive the items. I’m honestly, really excited about the impact we can make with this community!`,
-  
-  
+
   // ``,
   // ``,
   // ``,
+];
+
+const notes = [
+  {
+    class: "bg-blue-100",
+    title: "Impactful Community",
+    description:
+      "Received hundreds of member applications, carefully selecting to maintain a tight-knit and impactful community.",
+  },
+  {
+    class: "bg-red-100",
+    title: "Organic Growth",
+    description:
+      "Grown organically, fueled by genuine connections without any paid promotions.",
+  },
+  {
+    class: "bg-green-100",
+    title: "Recognition Programs",
+    description:
+      "Launched initiatives like a Recognition Program to celebrate outstanding women & philanthropic efforts.",
+  },
+  {
+    class: "bg-violet-100",
+    title: "Guest Speaker Series",
+    description:
+      "Hosted several engaging monthly Guest Speaker Series open to all, featuring inspiring women.",
+  },
+  {
+    class: "bg-white-100",
+    title: "Opportunities Shared",
+    description:
+      "Publicly shared exclusive opportunities - internships, jobs & fellowships - sourced through our network.",
+  },
 ];
 
 const AboutUs = () => {
@@ -124,7 +156,7 @@ const AboutUs = () => {
               <img
                 src={`/png/${founder.img}.png`}
                 alt={founder.img}
-                className="mb-8px"
+                className="mb-8px rounded-xl"
               />
 
               <div className="p-24px lg:p-32px flex flex-col gap-32px rounded-xl border border-violet-300 bg-violet-50 min-h-382px">
@@ -153,6 +185,35 @@ const AboutUs = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-[url(/png/notes-bg.png)] bg-center bg-cover">
+        <div className="bg-[rgba(0,0,0,0.8)] flex flex-col justify-center lg:min-h-350px overflow-hidden">
+          <div className="slideshow">
+            <div className="firstSlide gap-24px min-h-300px">
+              {[0, 1, 2].map((index) => (
+                <div key={index} className="flex items-center gap-24px">
+                  {notes.map((note, i) => (
+                    <div
+                      key={note.title}
+                      className={`rounded-xl p-16px flex flex-col gap-12px max-w-200px min-w-200px lg:max-w-264px lg:min-w-264px min-h-158px w-full transition-all duration-300 ease-in-out hover:scale-[114%] hover:cursor-pointer ${note.class}`}
+                    >
+                      <p className="text-16 text-black-200">{i + 1}.</p>
+
+                      <h3 className="text-16 text-violet-500 font-georgia capitalize">
+                        {note.title}
+                      </h3>
+
+                      <p className="text-12 font-georgia text-wrap">
+                        {note.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -191,7 +252,11 @@ const AboutUs = () => {
               key={i}
               className="bg-[url(/png/whatsapp-bg.png)] bg-center bg-cover rounded-xl h-fit flex flex-col gap-24px p-24px break-inside-avoid mb-12px"
             >
-              <img src="/png/whatsapp-icon.png" alt="whatsapp icon" className="max-sm:-48px h-64px w-fit" />
+              <img
+                src="/png/whatsapp-icon.png"
+                alt="whatsapp icon"
+                className="max-sm:-48px h-64px w-fit"
+              />
               <div
                 className="text-white text-14 max-sm:text-16 font-georgia"
                 dangerouslySetInnerHTML={{ __html: conversation }}

@@ -36,6 +36,8 @@ const EventsPage = () => {
           </Link>
         </div>
       </section>
+
+      <section className=" px-24px py-48px lg:p-80px"></section>
     </>
   );
 };
