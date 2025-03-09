@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-24px lg:p-80px bg-white">
+      <section className="px-24px py-48px lg:p-80px bg-white">
         <h1 className="text-32 text-violet-500 font-bold text-center mb-24px lg:mb-48px">
           Our Members Represent Global Brands
         </h1>
@@ -169,7 +169,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white-500 p-24px lg:p-80px">
+      <section className="bg-white-500 px-24px py-48px lg:p-80px">
         <motion.div
           initial={{ opacity: 0, y: 0 }}
           whileInView={{
@@ -287,7 +287,7 @@ export default function Home() {
                 >
                   {card.title}
                 </h2>
-                <p className="text-18 font-georgia text-justify max-w-290px">
+                <p className="text-18 font-georgia text-left max-w-290px">
                   {card.description}
                 </p>
                 <button
@@ -302,7 +302,7 @@ export default function Home() {
       </div>
 
       {/* membership spotlight */}
-      <div className="bg-violet-50 p-24px lg:p-80px flex items-center justify-center flex-wrap gap-24px lg:gap-72px">
+      <div className="bg-violet-50 px-24px py-48px lg:p-80px flex items-center justify-center flex-wrap gap-24px lg:gap-72px">
         <img src="/png/Membership Image.png" alt="member spotlight" />
         <div className="flex flex-col gap-24px max-w-460px w-full">
           <h1 className="text-24 lg:text-36 font-bold text-violet-500">
@@ -329,14 +329,15 @@ export default function Home() {
       </div>
 
       {/* membership spotlight */}
-      <div className="p-24px lg:p-80px bg-[url(/png/newsletterSection.png)] bg-cover">
+      <div className="px-24px py-48px lg:p-80px bg-[url(/png/newsletterSection.png)] bg-cover">
         <div className="bg-violet-50 rounded-lg p-24px lg:p-48px flex flex-col items-center justify-center gap-24px mx-auto max-w-794px w-full">
           <h1 className="text-24 lg:text-36 text-violet-500 font-bold text-center">
             Stay Connected With Our Newsletter
           </h1>
-          <p className="font-georgia text-18 text-center max-w-546px">
-            Subscribe to the HerSynergy newsletter and get the latest updates
-            delivered straight to your inbox.
+          <p className="font-georgia text-18 text-center max-w-556px">
+            Join ambitious women upgrading their careers, one email at a time.
+            Job alerts, career moves, and success stories—all in your inbox, no
+            fluff.
           </p>
 
           <form className="flex flex-col max-w-606px w-full">

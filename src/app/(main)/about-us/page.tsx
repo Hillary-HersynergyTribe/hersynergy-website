@@ -34,8 +34,8 @@ const AboutUs = () => {
     <>
       <PageHeader title="about us" bgImage="about-us"></PageHeader>
 
-      <section className="p-24px lg:p-80px">
-        <h1 className="text-violet-500 text-28 lg:text-36 font-bold text-center mb-24px">
+      <section className="px-24px py-48px lg:p-80px">
+        <h1 className="text-violet-500 text-24 lg:text-36 font-bold text-center mb-24px">
           HerSynergy Tribe: Bridging Gaps, Building Connections
         </h1>
 
@@ -51,9 +51,9 @@ const AboutUs = () => {
         </p>
       </section>
 
-      <section className="bg-[url(/png/hersynergy-tribe-bg.png)] bg-cover bg-center p-24px lg:p-80px">
+      <section className="bg-[url(/png/hersynergy-tribe-bg.png)] bg-cover bg-center px-24px py-48px lg:p-80px">
         <div className="flex items-center justify-between max-md:flex-wrap gap-24px max-w-942px mx-auto">
-          <p className="text-14 lg:text-20 font-georgia max-w-430px order-2 lg:order-1">
+          <p className="text-16 lg:text-20 font-georgia max-w-430px order-2 lg:order-1">
             <span className="font-bold text-violet-500">HerSynergy Tribe</span>{" "}
             creates a supportive community where women can access mentorship,
             resources, and genuine connections to propel their careers forward.
@@ -66,7 +66,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="bg-violet-50 p-24px lg:p-80px">
+      <section className="bg-violet-50 px-24px py-48px lg:p-80px">
         <div className="max-w-934px mx-auto flex flex-col gap-24px">
           <h2 className="text-24 lg:text-32 font-bold text-violet-500">
             Why We Exist
@@ -80,23 +80,23 @@ const AboutUs = () => {
 
           {whyWeExist.map((why) => (
             <div className="flex items-start gap-8px" key={why}>
-              <img src="/svg/arrow-down.svg" alt="list icon" />
+              <img src="/svg/Ellipse.svg" alt="list icon" className="mt-6px" />
               <p className="text-16 lg:text-20 font-georgia">{why}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="p-24px lg:p-80px">
-        <h1 className="text-violet-500 text-28 lg:text-36 font-bold text-center mb-24px">
+      <section className="px-24px py-48px lg:p-80px">
+        <h1 className="text-violet-500 text-24 lg:text-36 font-bold text-center mb-24px">
           Meet The Founders
         </h1>
         <p className="text-14 lg:text-20 text-center font-georgia mb-24px">
-          Meet the incredible women creating platforms and driving innovation in
-          the tech space!
+          Meet the visionaries turning career challenges into opportunities for
+          ambitious women.
         </p>
 
-        <div className="flex items-start gap-24px max-w-[1126px] mx-auto">
+        <div className="flex max-sm:flex-wrap items-start gap-24px max-w-[1126px] mx-auto">
           {founders.map((founder) => (
             <div key={founder.img} className="max-w-552px w-full">
               <img
@@ -114,14 +114,14 @@ const AboutUs = () => {
                     {founder.role}
                   </p>
                 </div>
-                <p className="text-16 lg:text-18 font-georgia">
+                <p className="text-14 lg:text-18 font-georgia">
                   {founder.description}
                 </p>
 
                 <div className="flex items-center flex-wrap gap-8px mt-auto">
                   {founder.skills.map((skill) => (
                     <div
-                      className="border border-violet-500 px-16px py-8px rounded-xl text-12 capitalize whitespace-nowrap"
+                      className="border border-violet-500 text-violet-500 px-8px lg:px-16px py-8px rounded-xl text-12 capitalize whitespace-nowrap"
                       key={skill}
                     >
                       {skill}
@@ -134,19 +134,21 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="p-24px lg:p-80px">
-        <div className="max-w-[1128px] mx-auto flex items-center max-md:flex-wrap justify-between gap-24px">
-          <img
-            src="/png/creating-a-sustainab;e-movement.png"
-            alt="creating-a-sustainable-movement"
-            className="max-w-full"
-          />
+      <section className="px-24px py-48px lg:p-80px">
+        <div className="max-w-[1128px] mx-auto flex items-center max-md:flex-wrap justify-between gap-24px lg:gap-48px">
+          <div className="w-full max-nav:max-w-400px">
+            <img
+              src="/png/creating-a-sustainab;e-movement.png"
+              alt="creating-a-sustainable-movement"
+              className="w-full"
+            />
+          </div>
           <div className="flex flex-col gap-24px max-w-480px w-full">
             <h2 className="text-24 lg:text-36 font-bold text-violet-500">
               Creating A Sustainable Movement
             </h2>
             <p className="text-14 lg:text-20">
-              We’re building more than a community! We’re creating a movement
+              We’re building more than a community. We’re creating a movement
               where women support each other to achieve their dreams.
             </p>
             <button className="bg-violet-500 rounded-2xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:py-16px">

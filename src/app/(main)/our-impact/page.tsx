@@ -4,19 +4,19 @@ import { PageHeader } from "../../components/PageHeader";
 const summaryImpacts = [
   {
     img: "opportunities",
-    title: "100+ Shared Oppourtunities",
+    title: "400+ Shared Opportunities",
     description:
       "Including jobs and internships leveraging our member network.",
   },
   {
     img: "recognitions",
-    title: "60+ Women Recognized",
+    title: "120+ Women Recognized",
     description:
       "For their accomplishments through our monthly recognition program.",
   },
   {
     img: "raised",
-    title: "Over ₦2 Million Raised",
+    title: "Over $5000 Raised",
     description:
       "To support impoverished young ladies & public school children in rural Nigeria.",
   },
@@ -80,7 +80,7 @@ const OurImpact = () => {
     <>
       <PageHeader title="our impact" bgImage="our-impact"></PageHeader>
 
-      <div className="p-24px lg:py-140px flex flex-col items-center gap-32px bg-violet-50">
+      <div className="px-24px py-48px lg:py-140px flex flex-col items-center gap-32px bg-violet-50">
         <h1 className="text-24 lg:text-36 text-violet-700 font-bold text-center">
           Our Impact
         </h1>
@@ -116,7 +116,7 @@ const OurImpact = () => {
         </Link>
       </div>
 
-      <div className="bg-[url(/png/impact-bg.png)] bg-cover p-24px lg:py-80px lg:px-140px">
+      <div className="bg-[url(/png/impact-bg.png)] bg-cover px-24px py-48px lg:py-80px lg:px-140px">
         <h1 className="text-24 lg:text-36 text-violet-700 font-bold text-center">
           The HerSynergy Way: Our Impact
         </h1>
@@ -138,7 +138,7 @@ const OurImpact = () => {
                 {impact.achievements.map((achievement) => (
                   <div
                     key={achievement.title}
-                    className="bg-violet-900 rounded-xl p-12px lg:p-32px flex flex-col text-white gap-24px"
+                    className="bg-violet-900 rounded-xl p-12px lg:p-32px flex flex-col text-white gap-24px capitalize"
                   >
                     <img
                       src={`/png/${achievement.img}.png`}

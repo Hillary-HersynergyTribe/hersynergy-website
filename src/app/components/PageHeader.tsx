@@ -15,8 +15,8 @@ export const PageHeader = ({
   };
 
   return (
-    <div className={`p-140px max-lg:px-24px max-lg:py-24px bg-cover ${bgImages[bgImage]}`}>
-      <h1 className="text-16 md:text-40 text-white font-bold capitalize">
+    <div className={`p-140px max-lg:px-24px max-lg:pt-48px max-lg:pb-36px bg-cover ${bgImages[bgImage]}`}>
+      <h1 className="text-20 md:text-40 text-white font-bold capitalize">
         {title}
       </h1>
     </div>

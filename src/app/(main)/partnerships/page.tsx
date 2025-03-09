@@ -77,7 +77,7 @@ const PartnershipsPage = () => {
 
       <section className="bg-[url(/png/partnership-bg-1.png)] bg-cover bg-center p-140px max-lg:px-24px max-lg:py-24px">
         <div className="flex flex-col gap-16px lg:gap-32px">
-          <h1 className="text-violet-500 text-28 lg:text-36 font-bold">
+          <h1 className="text-violet-500 text-24 lg:text-36 font-bold">
             Support Our Mission
           </h1>
           <p className="text-18">
@@ -108,7 +108,7 @@ const PartnershipsPage = () => {
         </div>
       </section>
 
-      <section className="bg-[url(/png/partnership-bg-2.png)] bg-cover bg-center p-24px lg:py-80px flex flex-col items-center gap-16px lg:gap-32px">
+      <section className="bg-[url(/png/partnership-bg-2.png)] bg-cover bg-center max-sm:bg-top p-24px lg:py-80px flex flex-col items-center gap-16px lg:gap-32px">
         <h2 className=" text-24 lg:text-32 font-bold text-white text-center">
           Ready to Create Impact?
         </h2>
@@ -129,7 +129,7 @@ const PartnershipsPage = () => {
       {partnershipOpportunities.map((oppurtunity) => (
         <section
           key={oppurtunity.title}
-          className={`p-24px lg:p-80px ${oppurtunity.bg}`}
+          className={`px-24px py-48px lg:p-80px ${oppurtunity.bg}`}
         >
           <div className="max-w-[1128px] mx-auto">
             <div className="border border-violet-500 rounded-xl p-8px mb-24px">
@@ -138,11 +138,11 @@ const PartnershipsPage = () => {
               </h2>
             </div>
 
-            <div className="flex gap-24px">
+            <div className="flex  max-sm:flex-wrap gap-24px">
               {oppurtunity.opportunities.map((o) => (
                 <div
                   key={o.img}
-                  className={`rounded-xl flex flex-col gap-24px p-24px ${o.class}`}
+                  className={`rounded-xl flex flex-col gap-24px p-24px w-full ${o.class}`}
                 >
                   <img
                     src={`/png/${o.img}.png`}
@@ -150,7 +150,7 @@ const PartnershipsPage = () => {
                     className="h-100px w-fit"
                   />
 
-                  <h2 className="text-18 lg:text-24 font-bold">{o.title}</h2>
+                  <h2 className="text-18 lg:text-24 font-bold capitalize">{o.title}</h2>
                   <p className="text-14 lg:text-18">{o.description}</p>
                 </div>
               ))}

@@ -63,7 +63,7 @@ const MembershipPage = () => {
           {benefits.map((benefit) => (
             <div
               key={benefit.img}
-              className={`rounded-xl lg:max-w-382px w-full odd:bg-[ur(/png/card-bg-2.png)] even:bg-[ur(/png/card-bg-2.png)] bg-bottom bg-contain transition-all duration-500 ease-in-out hover:cursor-pointer hover:shadow-popUp`}
+              className={`rounded-xl lg:max-w-382px w-full odd:bg-[url(/png/card-bg-2.png)] even:bg-[url(/png/card-bg-1.png)] bg-bottom bg-cover rounded-b-2xl transition-all duration-500 ease-in-out hover:cursor-pointer hover:shadow-popUp`}
             >
               <img src={`/png/${benefit.img}.png`} alt={`${benefit.img}-img`} />
               <div className="p-24px">

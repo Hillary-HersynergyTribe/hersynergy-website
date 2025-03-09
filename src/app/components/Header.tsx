@@ -45,7 +45,7 @@ const menuItems = [
 
 export const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [currentRoute, setCurrentRoute] = useState("");
+  const [currentRoute, setCurrentRoute] = useState("Home");
 
   return (
     <header>
@@ -171,11 +171,11 @@ export const Header = () => {
                 </div>
 
                 {currentRoute === link.name && link.children ? (
-                  <div className="lg:absolute lg:top-[100%] lg:shadow lg:min-w-[198px] w-fit bg-white-100 rounded-10px lg:z-10 transition-all ease-in-out duration-300 lg:h-fit max-lg:ml-20px">
+                  <div className="lg:absolute lg:top-[100%] lg:shadow lg:min-w-[228px] w-fit bg-white-100 rounded-10px lg:z-10 transition-all ease-in-out duration-300 lg:h-fit max-lg:ml-20px">
                     <ul className="lg:pl-20px lg:pb-20px">
                       {link.children?.map((subRoute) => (
                         <li
-                          className="py-8px lg:pr-20px lg:border-b lg:border-b-violet-50"
+                          className="py-8px lg:pr-20px not-last-of-type:lg:border-b not-last-of-type:lg:border-b-violet-50"
                           key={subRoute.name}
                           onClick={(event) => {
                             event.stopPropagation();

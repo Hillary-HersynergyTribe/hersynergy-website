@@ -135,7 +135,7 @@ const MentorshipPage = () => {
     <>
       <PageHeader title="mentorship" bgImage="mentorship"></PageHeader>
 
-      <section className="p-24px lg:p-80px bg-violet-50">
+      <section className="px-24px py-48px lg:p-80px bg-violet-50">
         <div className="mx-auto max-w-[1112px] bg-[url(/png/mentorship-bg.png)] bg-center bg-cover py-48px lg:py-120px rounded-xl flex flex-col items-center gap-24px">
           <h1 className="text-24 lg:text-32 text-center text-white max-w-712px">
             Position the Next Generation of Tech Leaders for Success
@@ -149,25 +149,27 @@ const MentorshipPage = () => {
         </div>
       </section>
 
-      <section className="bg-[url(/png/impact-bg.png)] bg-cover p-24px lg:p-80px">
+      <section className="bg-[url(/png/impact-bg.png)] bg-cover px-24px py-48px lg:p-80px">
         <div className="max-w-[1122px] mx-auto flex flex-col items-center gap-24px">
-          <h2 className="text-24 lg:text-32 font-bold text-violet-500">
+          <h2 className="text-24 lg:text-32 font-bold text-violet-500 capitalize">
             Meet our mentees
           </h2>
 
-          <div className="grid grid-cols-4 gap-24px  ">
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24px  ">
             {displayedMentees.map((mentee) => (
               <div
                 key={mentee.img}
                 className="rounded-xl border border-violet-500 relative"
               >
-                <img src={`/png/mentees/${mentee.img}.png`} alt={mentee.name} />
+                <img src={`/png/mentees/${mentee.img}.png`} alt={mentee.name} className="rounded-[10px]" />
 
                 <div className="absolute bottom-20px left-1/2 -translate-x-1/2 rounded-xl py-4px px-24px bg-violet-500 border border-violet-50 text-violet-50 text-center">
-                  <p className="text-16 font-semibold whitespace-nowrap">
+                  <p className="text-14 lg:text-16 font-semibold whitespace-nowrap">
                     {mentee.name}
                   </p>
-                  <p className="text-14 whitespace-nowrap">{mentee.role}</p>
+                  <p className="text-12 lg:text-14 whitespace-nowrap">
+                    {mentee.role}
+                  </p>
                 </div>
               </div>
             ))}
@@ -189,25 +191,27 @@ const MentorshipPage = () => {
         </div>
       </section>
 
-      <section className="bg-[url(/png/impact-bg.png)] bg-cover p-24px lg:p-80px">
+      <section className="bg-[url(/png/impact-bg.png)] bg-cover px-24px py-48px lg:p-80px">
         <div className="max-w-[1122px] mx-auto flex flex-col items-center gap-24px">
           <h2 className="text-24 lg:text-32 font-bold text-violet-500">
             Get To Know Our Mentors
           </h2>
 
-          <div className="grid grid-cols-4 gap-24px  ">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24px  ">
             {displayedMentors.map((mentor) => (
               <div
                 key={mentor.img}
                 className="rounded-xl border border-violet-500 relative"
               >
-                <img src={`/png/mentors/${mentor.img}.png`} alt={mentor.name} />
+                <img src={`/png/mentors/${mentor.img}.png`} alt={mentor.name} className="rounded-[10px]" />
 
                 <div className="absolute bottom-20px left-1/2 -translate-x-1/2 rounded-xl py-4px px-24px bg-violet-500 border border-violet-50 text-violet-50 text-center">
-                  <p className="text-16 font-semibold whitespace-nowrap">
+                  <p className="text-14 lg:text-16 font-semibold whitespace-nowrap">
                     {mentor.name}
                   </p>
-                  <p className="text-14 whitespace-nowrap">{mentor.role}</p>
+                  <p className="text-12 lg:text-14 whitespace-nowrap">
+                    {mentor.role}
+                  </p>
                 </div>
               </div>
             ))}
@@ -228,7 +232,6 @@ const MentorshipPage = () => {
           </button>
         </div>
       </section>
-
 
       <section className="bg-blue-100"></section>
     </>

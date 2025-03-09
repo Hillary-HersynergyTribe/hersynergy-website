@@ -39,6 +39,48 @@ const topics = [
   { img: "Topic 6", topic: "Prioritizing Self-Care & Preventing Burnout" },
 ];
 
+const sponsorTips = [
+  {
+    img: "sponsor-1",
+    title: "Access to Diverse Talent Pool",
+    class: "bg-green-50",
+    description:
+      "By sponsoring, you gain immediate access to a network of accomplished women professionals, most of whom are entrepreneurs.",
+  },
+  {
+    img: "sponsor-2",
+    title: "Gain Brand Visibility",
+    class: "bg-white-300",
+    description:
+      "As a sponsor, your brand will be prominently displayed across all event materials, and social media platforms.",
+  },
+  {
+    img: "sponsor-3",
+    title: "Empower Women Entrepreneurs",
+    class: "bg-blue-50",
+    description:
+      "Your sponsorship directly fuels initiatives like the EmpowerHER Grant program, fostering female talent and innovation.",
+  },
+];
+
+const attendees = [
+  {
+    title: "Founders or Early Employees at Startups:",
+    description:
+      "E-commerce business owners, tech startup founders, and operations leads looking to scale their businesses.",
+  },
+  {
+    title: "Early to Mid-Career Professionals in Non - Tech Industries:",
+    description:
+      "Marketing  specialists, HR managers,  financial analysts, and social media managers focused on  advancing their careers and building leadership skills.",
+  },
+  {
+    title: "Mid to Senior - Level Professionals in Creative Industries:",
+    description:
+      "Brand strategists,  product managers, UX designers, CTOs , and consultants aiming to drive  innovation and expand their impact.",
+  },
+];
+
 const SummitPage = () => {
   return (
     <>
@@ -47,22 +89,27 @@ const SummitPage = () => {
         bgImage="events"
       ></PageHeader>
 
-      <section className="bg-violet-50 p-24px lg:p-80px">
+      <section className="bg-violet-50 px-24px py-48px lg:p-80px">
         <div className="max-w-[1128px] mx-auto">
-          <h1 className="text-24 lg:text-36 font-bold text-violet-500">
+          <h1 className="text-24 lg:text-36 font-bold text-violet-500 mb-24px">
             A Transformative Summit for Women Ready to Achieve More
           </h1>
 
-          <img src="/png/unleash-summit-lg.png" alt="unleashher image" />
+          <img
+            src="/png/unleash-summit-lg.png"
+            alt="unleashher image"
+            className="rounded-xl"
+          />
 
           <button className="bg-violet-500 rounded-4xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px flex items-center gap-8px">
             Download Sponsorship Deck
+            <img src="/svg/download.svg" alt="download icon" />
           </button>
         </div>
       </section>
 
-      <section className="bg-[url(/png/hersynergy-tribe-bg.png)] bg-cover bg-center p-24px lg:p-80px">
-        <div className="flex flex-col gap-24px items-center justify-center">
+      <section className="bg-[url(/png/hersynergy-tribe-bg.png)] bg-cover bg-center px-24px py-48px lg:p-80px">
+        <div className="flex flex-col gap-24px items-center justify-center max-w-[1128px]">
           <p className="text-violet-500 text-24 lg:text-36 font-bold text-center">
             UnleashHER Potential Summit 2025 is your chance to connect, learn,
             and grow with HerSynergy’s inspiring community of women.
@@ -70,7 +117,7 @@ const SummitPage = () => {
           <p className="text-violet-500 text-24 lg:text-36 font-bold text-center">
             Whether you’re scaling your business, navigating a pivot, or seeking
             clarity in your career, the insightful panels and workshops at this
-            summit is designed to equip you with the knowledge, confidence, and
+            summit are designed to equip you with the knowledge, confidence, and
             connections to unlock your next chapter.
           </p>
           <button className="bg-violet-500 rounded-4xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px flex items-center gap-8px">
@@ -79,7 +126,55 @@ const SummitPage = () => {
         </div>
       </section>
 
-      <section className="bg-[url(/png/attend-summmit-bg.png)] bg-cover bg-center p-24px lg:p-80px">
+      <section className="bg-[url(/png/hersynergy-tribe-bg.png)] bg-cover bg-center ">
+        <div className="bg-[rgba(0,0,0,0.6)] px-24px py-48px lg:p-80px">
+          <div className="mx-auto max-w-704px flex flex-col gap-12px lg:gap-24px">
+            <h2 className="text-20 lg:text-32 font-bold text-white text-center">
+              UnleashHer Potential Summit, 2025
+            </h2>
+
+            <p className="text-16 lg:text-20 text-white text-center">
+              Where Ambition Meets Opportunity: Building Future - Ready Careers
+              & Businesses
+            </p>
+
+            <div className="bg-violet-50 rounded-xl flex items-center gap-12px p-16px">
+              <img src="/svg/calendar.svg" alt="calendar icon" />
+              <p className="text-16 lg:text-24 text-violet-500">
+                April 12, 2025
+              </p>
+            </div>
+            <div className="bg-violet-50 rounded-xl flex items-center gap-12px p-16px">
+              <img src="/svg/location.svg" alt="location icon" />
+              <p className="text-16 lg:text-24 text-violet-500">
+                Radisson Blu Anchorage Hotel, V.I, Lagos
+              </p>
+            </div>
+            <div className="flex items-center gap-12px lg:gap-24px">
+              <div className="bg-violet-50 rounded-xl flex flex-col items-center gap-12px w-full p-16px">
+                <p className="text-24 lg:text-36 text-violet-500 font-bold">
+                  10+
+                </p>
+                <p className="text-16 font-semibold">Speakers</p>
+              </div>
+              <div className="bg-violet-50 rounded-xl flex flex-col items-center gap-12px w-full p-16px">
+                <p className="text-24 lg:text-36 text-violet-500 font-bold">
+                  250
+                </p>
+                <p className="text-16 font-semibold">Attendees</p>
+              </div>
+              <div className="bg-violet-50 rounded-xl flex flex-col items-center gap-12px w-full p-16px">
+                <p className="text-24 lg:text-36 text-violet-500 font-bold">
+                  5+
+                </p>
+                <p className="text-16 font-semibold">Grants</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[url(/png/attend-summmit-bg.png)] bg-cover bg-center px-24px py-48px lg:p-80px">
         <div className="max-w-[1128px] mx-auto">
           <h2 className="text-white font-bold text-24 lg:text-36 text-center mb-24px lg:mb-48px">
             Be a part of the summit
@@ -97,7 +192,7 @@ const SummitPage = () => {
                     {action.title}
                   </h3>
 
-                  <p className="text-14 lg:text-18 text-center">
+                  <p className="text-14 lg:text-18 text-center font-georgia">
                     {action.description}
                   </p>
 
@@ -111,11 +206,73 @@ const SummitPage = () => {
         </div>
       </section>
 
-      <section className="p-24px lg:p-80px bg-[url(/png/panel.png)] bg-cover bg-center">
-        <div className="mx-auto max-w-[1128px]">
-            <h2 className="font-bold text-24 lg:text-36 text-white">Panel and Keynote Topics</h2>
+      <section className="bg-white-600 px-24px py-48px lg:p-80px">
+        <div className="max-w-[1128px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-24px">
+            {attendees.map((attendee) => (
+              <div
+                key={attendee.title}
+                className="bg-white rounded-xl p-24px flex flex-col gap-24px"
+              >
+                <h3 className="text-20 lg:text-24 text-violet-500 font-bold">
+                  {attendee.title}
+                </h3>
+                <p className="text-14 lg:text-20 font-georgia">
+                  {attendee.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-3"></div>
+      <section className="px-24px py-48px lg:p-80px bg-[url(/png/panel.png)] bg-cover bg-center">
+        <div className="mx-auto max-w-[1128px]">
+          <h2 className="font-bold text-24 lg:text-36 text-white text-center mb-24px lg:mb-48px">
+            Panel and Keynote Topics
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-24px">
+            {topics.map((topic) => (
+              <div className="relative h-174px" key={topic.topic}>
+                <img src={`/png/${topic.img}.png`} alt={topic.topic} />
+                <div className="bg-violet-50 rounded-xl p-8px absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:min-w-200px">
+                  <p className="text-center font-bold text-violet-500 text-14">
+                    {topic.topic}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-black-50 px-24px py-48px lg:p-80px">
+        <div className="mx-auto max-w-1128px flex flex-col items-center gap-48px">
+          <h2 className="text-24 lg:text-36 font-bold text-violet-500 text-center">
+            Why Sponsor Us?
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-24px">
+            {sponsorTips.map((tip) => (
+              <div
+                key={tip.img}
+                className={`rounded-xl p-24px flex flex-col items-center gap-8px ${tip.class}`}
+              >
+                <img src={`/png/${tip.img}.png`} alt={tip.title} />
+
+                <h3 className="text-16 lg:text-24 font-bold text-violet-500 text-center max-w-226px">
+                  {tip.title}
+                </h3>
+
+                <p className="text-14 lg:text-16">{tip.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <button className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:px-48px lg:py-16px">
+            Become a sponsor
+          </button>
         </div>
       </section>
     </>
