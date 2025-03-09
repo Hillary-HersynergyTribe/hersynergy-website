@@ -207,7 +207,17 @@ const SummitPage = () => {
       </section>
 
       <section className="bg-white-600 px-24px py-48px lg:p-80px">
-        <div className="max-w-[1128px] mx-auto">
+        <div className="max-w-[1128px] mx-auto flex flex-col items-center justify-center gap-24px lg:gap-48px">
+          <h2 className="text-violet-500 font-bold text-24 lg:text-36 text-center">
+            Who Can Attend?
+          </h2>
+          <p className="text-14 lg:text-18 text-center font-georgia">
+            This summit is designed for women from all walks of life who are
+            eager to level up in their careers, learn from industry experts, and
+            connect with like-minded women across various sectors. Whether
+            you’re looking to grow your skills, expand your network, or gain
+            fresh perspectives, this event is for you.
+          </p>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-24px">
             {attendees.map((attendee) => (
               <div
@@ -223,6 +233,10 @@ const SummitPage = () => {
               </div>
             ))}
           </div>
+
+          <button className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:py-16px mt-auto">
+            Get Your Tickets
+          </button>
         </div>
       </section>
 
@@ -232,7 +246,7 @@ const SummitPage = () => {
             Panel and Keynote Topics
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-24px">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24px">
             {topics.map((topic) => (
               <div className="relative h-174px" key={topic.topic}>
                 <img src={`/png/${topic.img}.png`} alt={topic.topic} />

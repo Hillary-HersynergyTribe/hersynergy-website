@@ -331,7 +331,7 @@ export default function Home() {
       </div>
       {/* membership spotlight */}
       <section className="py-48px lg:py-80px bg-blue-50">
-        <h1 className="text-24 lg:text-36 text-white-50 font-bold text-center mb-48px">
+        <h1 className="text-24 lg:text-36 text-violet-500 font-bold text-center mb-48px">
           What Members Have To Say
         </h1>
         <Testimonials></Testimonials>

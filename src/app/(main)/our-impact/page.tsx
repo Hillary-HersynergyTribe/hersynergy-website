@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { PageHeader } from "../../components/PageHeader";
+import { motion, AnimatePresence, animate } from "framer-motion";
 
 const summaryImpacts = [
   {
@@ -75,6 +77,7 @@ const impacts = [
     ],
   },
 ];
+
 const OurImpact = () => {
   return (
     <>
@@ -92,8 +95,22 @@ const OurImpact = () => {
         </p>
 
         <div className="flex gap-24px items-center justify-center flex-wrap w-full">
-          {summaryImpacts.map((card) => (
-            <div
+          {summaryImpacts.map((card, i) => (
+            <motion.div
+              initial={{ opacity: 0, y: 20 * (i + 1) }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.3,
+                  delay: 0,
+                  ease: [0.12, 0, 0, 1],
+                },
+              }}
+              viewport={{
+                amount: "some",
+                once: true,
+              }}
               key={card.img}
               className="p-24px bg-white-500 rounded-lg flex flex-col items-center justify-center gap-16px lg:max-w-360px w-full transition-all duration-500 ease-in-out hover:cursor-pointer hover:shadow-popUp"
             >
@@ -104,7 +121,7 @@ const OurImpact = () => {
               <p className="text-16 font-georgia text-center lg:max-w-288px w-full">
                 {card.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -136,7 +153,21 @@ const OurImpact = () => {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-24px">
                 {impact.achievements.map((achievement) => (
-                  <div
+                  <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        duration: 0.3,
+                        delay: 0,
+                        ease: [0.12, 0, 0, 1],
+                      },
+                    }}
+                    viewport={{
+                      amount: "some",
+                      once: true,
+                    }}
                     key={achievement.title}
                     className="bg-violet-900 rounded-xl p-12px lg:p-32px flex flex-col text-white gap-24px capitalize"
                   >
@@ -148,7 +179,7 @@ const OurImpact = () => {
                     <p className="text-20 font-georgia">
                       {achievement.description}
                     </p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
