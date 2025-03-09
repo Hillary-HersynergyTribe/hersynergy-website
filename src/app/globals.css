@@ -104,7 +104,7 @@ body {
 }
 
 .slideshow .secondSlide {
-  animation: moveSlideshow 80s linear infinite -20s;
+  animation: moveSlideshowRight 100s linear infinite alternate;
   display: flex;
   width: calc(350px * 7);
 }
@@ -123,5 +123,15 @@ body {
 
   100% {
     transform: translateX(calc(-350px * 5));
+  }
+}
+
+@keyframes moveSlideshowRight {
+  0% {
+    transform: translateX(calc(-350px * 5));
+  }
+
+  100% {
+    transform: translateX(0%);
   }
 }
