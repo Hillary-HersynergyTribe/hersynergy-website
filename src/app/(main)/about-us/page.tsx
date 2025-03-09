@@ -29,6 +29,28 @@ const whyWeExist = [
   "Women negotiate salaries less often and are less likely to receive raises. Our workshops equip members with the skills to negotiate effectively and secure the pay they deserve.",
 ];
 
+const conversations = [
+  `“I never ever regret joining any session. So much and quality. So much value and quality. Thank you! <span className="!text-green-700">@Hillary Omitogun</span>`,
+  `“Hi Ladies!
+  Just got a new job and wanted to give a public shoutout to <span className="!text-green-700">@Tamilore</span> for the Remote Buddy bot. It helped a lot in my applications. Also @Chidubem I followed your portfolio (with some ideas for the company) hack and got a call back).<br/>
+  
+  Also big thanks to <span className="!text-green-700">@Hillary</span> and <span className="!text-green-700">@Tolu Ajibola</span> for creating this group. You’re adding so so much valueeeee...”`,
+  `“I had such an amazing time! Thank you so much all for the vulnerability with sharing your stories from Tochi’s story to learning “scaring efficient” to our crypto argument. It was really the best way to end the year for me. Looking forward to our wins in 2025 and more physical meet ups.”`,
+  `“Thank you <span className="!text-green-700">@Hillary Omitogun</span> and <span className="!text-green-700">@Tolu A.</span>  for organising and driving this! The kids were really excited to receive the items. I’m honestly, really excited about the impact we can make with this community!`,
+  `“I never ever regret joining any session. So much and quality. So much value and quality. Thank you! <span className="!text-green-700">@Hillary Omitogun</span>`,
+  `“Hi Ladies!
+  Just got a new job and wanted to give a public shoutout to <span className="!text-green-700">@Tamilore</span> for the Remote Buddy bot. It helped a lot in my applications. Also @Chidubem I followed your portfolio (with some ideas for the company) hack and got a call back).<br/>
+  
+  Also big thanks to <span className="!text-green-700">@Hillary</span> and <span className="!text-green-700">@Tolu Ajibola</span> for creating this group. You’re adding so so much valueeeee...”`,
+  `“I lhad such an amazing time! Thank you so much all for the vulnerability with sharing your stories from Tochi’s story to learning “scaring efficient” to our crypto argument. It was really the best way to end the year for me. Looking forward to our wins in 2025 and more physical meet ups.”`,
+  `“Thank you <span className="!text-green-700">@Hillary Omitogun</span> and <span className="!text-green-700">@Tolu A.</span>  for organising and driving this! The kids were really excited to receive the items. I’m honestly, really excited about the impact we can make with this community!`,
+  
+  
+  // ``,
+  // ``,
+  // ``,
+];
+
 const AboutUs = () => {
   return (
     <>
@@ -155,6 +177,27 @@ const AboutUs = () => {
               Start your journey
             </button>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-violet-50 p-24px lg:p-80px">
+        <h2 className="text-center font-bold text-violet-500 text-24 lg:text-36 capitalize mb-24px">
+          conversations that drive change
+        </h2>
+
+        <div className="gap-12px columns-1 nav:columns-4 max-nav:columns-3 max-md:columns-2 max-sm:columns-1">
+          {conversations.map((conversation, i) => (
+            <div
+              key={i}
+              className="bg-[url(/png/whatsapp-bg.png)] bg-center bg-cover rounded-xl h-fit flex flex-col gap-24px p-24px break-inside-avoid mb-12px"
+            >
+              <img src="/png/whatsapp-icon.png" alt="whatsapp icon" className="max-sm:-48px h-64px w-fit" />
+              <div
+                className="text-white text-14 max-sm:text-16 font-georgia"
+                dangerouslySetInnerHTML={{ __html: conversation }}
+              ></div>
+            </div>
+          ))}
         </div>
       </section>
     </>
