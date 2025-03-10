@@ -183,8 +183,8 @@ export const Header = () => {
                 </div>
 
                 {currentRoute === link.name && link.children ? (
-                  <div className="lg:absolute lg:top-[100%] lg:shadow lg:min-w-[228px] w-fit bg-white-100 rounded-10px lg:z-10 transition-all ease-in-out duration-300 lg:h-fit max-lg:ml-20px">
-                    <ul className="lg:pl-20px lg:pb-20px">
+                  <div className="lg:absolute lg:top-[100%] lg:shadow lg:min-w-[228px] w-fit bg-white-100 rounded-md lg:z-10 transition-all ease-in-out duration-300 lg:h-fit max-lg:ml-20px">
+                    <ul className="lg:pl-20px">
                       {link.children?.map((subRoute) => (
                         <li
                           className="py-8px lg:pr-20px not-last-of-type:lg:border-b not-last-of-type:lg:border-b-violet-50"

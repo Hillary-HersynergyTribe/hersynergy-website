@@ -50,7 +50,7 @@ export const Footer = () => {
         <div className="lg:max-w-192px w-full">
           <div className="flex flex-col gap-12px mb-24px lg:mb-40px">
             <Link href="/">
-              <img src="/png/her-logo.png" alt="hersynergy logo" />
+              <img src="/png/her-logo.png" alt="hersynergy logo" className="h-30px" />
             </Link>
             <p className="text-violet-500 text-12 font-georgia">
               Empowering women in tech to connect, innovate, and lead.
@@ -140,7 +140,7 @@ export const Footer = () => {
             Contact Us
           </p>
           <p className="text-violet-500 text-16">
-            Email: inquiries@hersynergy.com
+            Email: inquiries@hersynergytribe.com
           </p>
         </div>
       </div>

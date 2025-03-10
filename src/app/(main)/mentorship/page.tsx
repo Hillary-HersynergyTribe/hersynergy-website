@@ -194,7 +194,7 @@ const mentorTestimonies = [
   },
   {
     img: "Jeniffer Echenim",
-    name: "Jeniffer Echenim",
+    name: "Jennifer Echenim",
     role: "Software Engineer",
     title: "“Such A Meaningful Experience!”",
     description:

@@ -24,43 +24,33 @@ const founders = [
 ];
 
 const whyWeExist = [
-  "63% of women report never having a formal mentor. We provide targeted mentorship programs to ensure no one has to navigate this journey alone.",
-  "Networking can feel transactional and unrelatable. At HerSynergy, we’ve created a space where connections are genuine, and support is mutual.",
-  "Women negotiate salaries less often and are less likely to receive raises. Our workshops equip members with the skills to negotiate effectively and secure the pay they deserve.",
+  "Lack of mentorship: 63% of women have never had a formal mentor. We bridge this gap with targeted mentorship programs.",
+  "Meaningful connections: Networking shouldn’t feel transactional. We foster genuine relationships and mutual support.",
+  "Fair compensation: Women negotiate less and receive fewer raises. Our workshops and conversations equip members to advocate for the pay they deserve.",
 ];
 
 const conversations = [
-  `“I never ever regret joining any session. So much and quality. So much value and quality. Thank you! <span className="!text-green-700">@Hillary Omitogun</span>`,
   `“Hi Ladies!
   Just got a new job and wanted to give a public shoutout to <span className="!text-green-700">@Tamilore</span> for the Remote Buddy bot. It helped a lot in my applications. Also @Chidubem I followed your portfolio (with some ideas for the company) hack and got a call back).<br/>
   
   Also big thanks to <span className="!text-green-700">@Hillary</span> and <span className="!text-green-700">@Tolu Ajibola</span> for creating this group. You’re adding so so much valueeeee...”`,
   `“I had such an amazing time! Thank you so much all for the vulnerability with sharing your stories from Tochi’s story to learning “scaring efficient” to our crypto argument. It was really the best way to end the year for me. Looking forward to our wins in 2025 and more physical meet ups.”`,
+  
+  `“I never ever regret joining any session. So much and quality. So much value and quality. Thank you! <span className="!text-green-700">@Hillary Omitogun</span>`,
+  
+  
   `“Thank you <span className="!text-green-700">@Hillary Omitogun</span> and <span className="!text-green-700">@Tolu A.</span>  for organising and driving this! The kids were really excited to receive the items. I’m honestly, really excited about the impact we can make with this community!`,
 
   `Hiii! The email🥹🥹🥹 -- I love it so much! It's the perfect start to my morning. I'm looking forward to all we achieve as a community in 2025 ✨🎉🎉❤️❤️`,
-  `I love this community! I'm so happy seeing the pictures and support🫶🏼❤️`,
+  
   `@Hillary just wanted to let you know that the group is such a great idea. i’m so inspired by you and your attention to detail! 
 
   It’s so great seeing all you’re doing, and looking fabulous while doing it!`,
-  `- It was refreshing hearing everyone talk about their gratitude list & catch word for 2025. I was excited to meet everyone especially my new connections @⁨~Temi F.⁩ @⁨~Toun Adereni⁩ 🤍🤍🤍
-
-  + everyone looked so good, omggg😍.
   
-  Thank you @⁨Tolu Ajibola 🚺⁩ @⁨Hillary 🦋⁩ for putting this together.
-  
-  - 🥺 A lot has really happened this year.
-  Thank you @⁨Hillary 🦋⁩ and @⁨Tolu Ajibola 🚺⁩ for this community 
-  
-  Thank you @⁨Chidi Uguru⁩ for telling me about it 🤗🤗`,
   `It was refreshing hearing everyone talk about their gratitude list & catch word for 2025. I was excited to meet everyone especially my new connections @ ~Temi F. @ ~ Toun
   Adereni
   + everyone looked so good, omggg
   Thank you @Tolu Ajibola for putting this together.`,
-  // ``,
-  // ``,
-  // ``,
-  // ``,
 ];
 
 const notes = [
@@ -110,7 +100,8 @@ const AboutUs = () => {
           Women make up only 28% of C-suite positions, with even fewer Black
           women represented. The path to senior leadership can feel isolating,
           with limited mentorship, fewer opportunities, and the constant
-          challenge of negotiating for equitable pay.  <br /><br />
+          challenge of negotiating for equitable pay.  <br />
+          <br />
           HerSynergy Tribe was founded in September 2023 to address these
           challenges by creating a supportive community where women can access
           mentorship, resources, and genuine connections to propel their careers
@@ -120,11 +111,27 @@ const AboutUs = () => {
 
       <section className="bg-[url(/png/hersynergy-tribe-bg.png)] bg-cover bg-center px-24px py-48px lg:p-80px">
         <div className="flex items-center justify-between max-md:flex-wrap gap-24px max-w-942px mx-auto">
-          <p className="text-16 lg:text-20 font-georgia max-w-430px order-2 lg:order-1">
-            <span className="font-bold text-violet-500">HerSynergy Tribe</span>{" "}
-            creates a supportive community where women can access mentorship,
-            resources, and genuine connections to propel their careers forward.
-          </p>
+          <div className="max-w-480px flex flex-col gap-24px order-2 lg:order-1">
+            <h2 className="text-24 lg:text-32 font-bold text-violet-500">
+              Why We Exist
+            </h2>
+
+            <p className="text-14 lg:text-18 font-georgia">
+              HerSynergy Tribe empowers women navigating mid-senior careers by
+              addressing the challenges that often hold them back:
+            </p>
+
+            {whyWeExist.map((why) => (
+              <div className="flex items-start gap-8px" key={why}>
+                <img
+                  src="/svg/Ellipse.svg"
+                  alt="list icon"
+                  className="mt-8px h-10px w-10px"
+                />
+                <p className="text-14 lg:text-18 font-georgia">{why}</p>
+              </div>
+            ))}
+          </div>
           <img
             src="/png/hersynergy-tribe.png"
             alt="hersynergy tribe"
@@ -133,35 +140,10 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="bg-violet-50 px-24px py-48px lg:p-80px">
-        <div className="max-w-934px mx-auto flex flex-col gap-24px">
-          <h2 className="text-24 lg:text-32 font-bold text-violet-500">
-            Why We Exist
-          </h2>
-
-          <p className="text-16 lg:text-20 font-georgia">
-            HerSynergy Tribe is a private community designed to empower women
-            navigating mid-senior level careers. We understand the unique
-            challenges faced at this stage:
-          </p>
-
-          {whyWeExist.map((why) => (
-            <div className="flex items-start gap-8px" key={why}>
-              <img src="/svg/Ellipse.svg" alt="list icon" className="mt-6px" />
-              <p className="text-16 lg:text-20 font-georgia">{why}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="px-24px py-48px lg:p-80px">
         <h1 className="text-violet-500 text-24 lg:text-36 font-bold text-center mb-24px">
           Meet The Founders
         </h1>
-        <p className="text-14 lg:text-20 text-center font-georgia mb-24px">
-          Meet the visionaries turning career challenges into opportunities for
-          ambitious women.
-        </p>
 
         <div className="flex max-sm:flex-wrap items-start gap-24px max-w-[1126px] mx-auto">
           {founders.map((founder) => (

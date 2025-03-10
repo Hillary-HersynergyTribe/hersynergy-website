@@ -47,6 +47,13 @@ const philanthropicEvents = [
     date: "",
     location: "Lagos",
   },
+  {
+    img: "philanthropy-outreach-4",
+    name: "",
+    type: "Philanthropic Outreach",
+    date: "",
+    location: "Lagos",
+  },
 ];
 
 const pastEvents = [
@@ -81,7 +88,7 @@ const EventsPage = () => {
       <section className="bg-violet-50 px-24px py-48px lg:p-80px">
         <div className="max-w-[1128px] mx-auto">
           <h1 className="text-24 lg:text-36 font-bold text-violet-500 mb-24px">
-            Upcoming event
+            Upcoming Event
           </h1>
 
           <img
@@ -155,7 +162,7 @@ const EventsPage = () => {
 
       <section className="py-48px lg:py-80px bg-violet-50">
         <h2 className="text-24 lg:text-36 font-bold text-violet-500 max-w-[1128px] mx-auto mb-24px lg:mb-48px px-24px">
-          Members Meet Up Events
+          Members Meetup Events
         </h2>
         <div className="slideshow">
           <div className="secondSlide gap-24px">

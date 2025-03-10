@@ -127,7 +127,7 @@ export const Testimonials = ({
             className="rounded-xl bg-violet-50 p-24px flex flex-col gap-24px min-w-460px max-sm:min-w-280px"
           >
             <div className="flex items-center gap-24px">
-              <div className="rounded-full h-80px w-80px">
+              <div className="rounded-full h-80px w-80px overflow-hidden">
                 <img
                   src={`/png/${type ? `${type}/` : ""}${testimonial.img}.png`}
                   alt={testimonial.img}

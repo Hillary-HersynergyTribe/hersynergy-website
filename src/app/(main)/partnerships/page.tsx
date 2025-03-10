@@ -119,7 +119,7 @@ const PartnershipsPage = () => {
 
       <section className="p-24px lg:p-80px">
         <div className="mx-auto max-w-[1126px] bg-[url(/png/social-bg.png)] bg-center bg-cover rounded-xl">
-          <div className="bg-[rgba(182,154,175,0.8)] flex items-center max-sm:flex-wrap gap-24px lg:gap-56px rounded-xl py-24px lg:py-80px px-24px @max-lg:px-48px nav:px-120px">
+          <div className="bg-[rgba(182,154,175,0.9)] flex items-center max-sm:flex-wrap gap-24px lg:gap-56px rounded-xl py-24px lg:py-80px px-24px @max-lg:px-48px nav:px-120px">
             <div className="rounded-xl border border-violet-500 bg-violet-50 w-full flex flex-col gap-24px p-16px lg:p-24px min-w-260px nav:min-w-356px ">
               {impressions.map((impression) => (
                 <div
@@ -136,7 +136,7 @@ const PartnershipsPage = () => {
               ))}
             </div>
 
-            <div className="flex flex-col gap-24px max-w-574px text-violet-800">
+            <div className="flex flex-col gap-24px max-w-574px text-violet-900">
               <h2 className="text-24 lg:text-36 font-bold">
                 Partner In Empowering Change
               </h2>
