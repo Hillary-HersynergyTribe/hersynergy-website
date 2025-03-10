@@ -76,12 +76,39 @@ const story = [
 ];
 
 const brands = [
-  { name: "lyft", link: "" },
-  { name: "moniepoint", link: "" },
-  { name: "paystack", link: "" },
-  { name: "microsoft", link: "" },
-  { name: "ayden", link: "" },
-  { name: "norebase", link: "" },
+  { name: "lyft", link: "https://www.lyft.com/" },
+  { name: "moniepoint", link: "https://moniepoint.com/" },
+  { name: "paystack", link: "https://paystack.com/" },
+  { name: "microsoft", link: "https://www.microsoft.com/" },
+  { name: "ayden", link: "https://www.adyen.com/" },
+  { name: "norebase", link: "https://norebase.com/" },
+];
+
+const testimonials = [
+  {
+    img: "Nenjom Asuk",
+    name: "Nenjom Asuk",
+    role: "Legal Practitioner, Tech Innovation, Fintech",
+    title: "“Incredibly Helpful to my Growth!”",
+    description:
+      "“I’ve had the opportunity to meet people who have been incredibly helpful to my growth. The conversations have been so helpful and have pushed me to be bolder in my choices, e.g. the discussions on 10-year plans and salary negotiations. They’ve also provided valuable insights into certain back-end processes. I look forward to giving back to this community that has enriched my career.”",
+  },
+  {
+    img: "Florence Dairo",
+    name: "Florence Dairo",
+    role: "Co-Founder, Chief Product Officer, Zonda",
+    title: "“A Memorable and Impactful Platform!”",
+    description:
+      "“It has been both memorable and impactful for me. The bravery and openness of the women in the group have deeply inspired me, creating a space for reflection and growth. I’ve learned so much and am excited about opportunities to contribute more as we continue to build this amazing community together.”",
+  },
+  {
+    img: "Izzie Ekong",
+    name: "Izzie Ekong",
+    role: "Digital Creator, Temsi Africa",
+    title: "“A Safe Space for Every Woman in Tech!”",
+    description:
+      "“I love the honesty, vulnerability, and intelligence of the women in the community.”",
+  },
 ];
 
 export default function Home() {
@@ -126,8 +153,8 @@ export default function Home() {
             }}
             className="text-18 lg:text-28 text-white max-w-936px w-full text-center"
           >
-            The premier community equipping women to navigate mid - senior level
-            careers with confidence and connection
+            The premier community equipping women to navigate mid to senior
+            level careers with confidence and connection
           </motion.p>
 
           <motion.div
@@ -147,12 +174,18 @@ export default function Home() {
             }}
             className="flex items-center gap-24px"
           >
-            <button className="bg-violet-500 rounded-4xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px">
+            <Link
+              href="/membership"
+              className="bg-violet-500 rounded-4xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px"
+            >
               Join Now
-            </button>
-            <button className="bg-white rounded-4xl text-violet-500 font-bold text-16 w-fit px-24px py-16px mt-24px">
+            </Link>
+            <Link
+              href="/partnerships"
+              className="bg-white rounded-4xl text-violet-500 font-bold text-16 w-fit px-24px py-16px mt-24px"
+            >
               Partner with Us
-            </button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -164,9 +197,9 @@ export default function Home() {
 
         <div className="flex items-center justify-center gap-8px flex-wrap">
           {brands.map((brand) => (
-            <Link key={brand.name} href={brand.link}>
+            <a key={brand.name} href={brand.link} target="_blank">
               <img src={`/svg/${brand.name}.svg`} alt={brand.name} />
-            </Link>
+            </a>
           ))}
         </div>
       </section>
@@ -204,9 +237,12 @@ export default function Home() {
                 </div>
               ))}
 
-              <button className="bg-violet-500 rounded-3xl text-white text-12 lg:text-16 font-semibold w-fit px-12px py-8px lg:px-24px lg:py-16px">
+              <Link
+                href="/about-us"
+                className="bg-violet-500 rounded-3xl text-white text-12 lg:text-16 font-semibold w-fit px-12px py-8px lg:px-24px lg:py-16px"
+              >
                 Learn More
-              </button>
+              </Link>
             </div>
 
             <motion.div
@@ -271,7 +307,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-violet-600 p-24px lg:py-80px flex flex-col gap-32px">
+      <section className="bg-violet-600 p-24px lg:py-80px flex flex-col gap-32px">
         <h1 className="text-24 lg:text-36 text-white-50 font-bold text-center">
           Fueling Growth Through Collective Impact
         </h1>
@@ -301,7 +337,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* membership spotlight */}
       <div className="bg-violet-50 px-24px py-48px lg:p-80px flex items-center justify-center flex-wrap gap-24px lg:gap-72px">
@@ -324,20 +360,52 @@ export default function Home() {
             ))}
           </ol>
 
-          <button className="bg-violet-500 rounded-4xl text-white text-16 w-fit px-24px py-16px mt-24px">
+          <Link
+            href="/membership"
+            className="bg-violet-500 rounded-4xl text-white text-16 w-fit px-24px py-16px mt-24px"
+          >
             Become a member
-          </button>
+          </Link>
         </div>
       </div>
       {/* membership spotlight */}
-      <section className="py-48px lg:py-80px bg-blue-50">
+
+      <section className="p-48px lg:p-80px bg-blue-50">
         <h1 className="text-24 lg:text-36 text-violet-500 font-bold text-center mb-48px">
           What Members Have To Say
         </h1>
-        <Testimonials></Testimonials>
+        <div className="flex items-center justify-center flex-wrap gap-24px">
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.name}
+              className="rounded-xl bg-violet-50 p-24px flex flex-col gap-24px max-w-360px max-[770px]:max-w-320px w-full lg:min-h-452px"
+            >
+              <div className="flex items-center gap-24px">
+                <img
+                  src={`/png/${testimonial.img}.png`}
+                  alt={testimonial.img}
+                />
+                <div>
+                  <h4 className="text-16 font-semibold">{testimonial.name}</h4>
+                  <p className="text-violet-500 italic text-14">
+                    {testimonial.role}
+                  </p>
+                </div>
+              </div>
+
+              <h4 className="text-16 font-bold">{testimonial.title}</h4>
+              <p className="italic text-16 font-georgia">
+                {testimonial.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
 
-      <div className="px-24px py-48px lg:p-80px bg-[url(/png/newsletterSection.png)] bg-cover">
+      <section
+        id="newsletter"
+        className="px-24px py-48px lg:p-80px bg-[url(/png/newsletterSection.png)] bg-cover"
+      >
         <div className="bg-violet-50 rounded-lg p-24px lg:p-48px flex flex-col items-center justify-center gap-24px mx-auto max-w-794px w-full">
           <h1 className="text-24 lg:text-36 text-violet-500 font-bold text-center">
             Stay Connected With Our Newsletter
@@ -366,7 +434,7 @@ export default function Home() {
             </button>
           </form>
         </div>
-      </div>
+      </section>
     </>
   );
 }

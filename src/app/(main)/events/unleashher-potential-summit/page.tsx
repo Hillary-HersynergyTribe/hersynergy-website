@@ -7,7 +7,7 @@ const summitActions = [
     description:
       "Support the event through tailored sponsorship packages and gain brand recognition while showcasing your business to a dynamic audience of thriving women professionals.",
     buttonText: "Be a sponsor",
-    link: "",
+    link: "https://forms.gle/yu4JvcKMSfWWBPUm8",
   },
   {
     img: "attend",
@@ -15,7 +15,7 @@ const summitActions = [
     description:
       "Join us to learn, network, and grow along side industry leaders and professionals. Seize the opportunity to pitch your ideas for a grant and take your career to new heights.",
     buttonText: "Register Now",
-    link: "",
+    link: "https://tix.africa/hersynergysummit",
   },
   {
     img: "volunteer 2",
@@ -23,7 +23,7 @@ const summitActions = [
     description:
       " Make a difference by contributing your time and skills to the success of this event. Gain valuable experience while connecting with inspiring individuals",
     buttonText: "Be a volunteer",
-    link: "",
+    link: "https://forms.gle/yu4JvcKMSfWWBPUm8",
   },
 ];
 
@@ -101,15 +101,19 @@ const SummitPage = () => {
             className="rounded-xl"
           />
 
-          <button className="bg-violet-500 rounded-4xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px flex items-center gap-8px">
+          <a
+            href="/pdf/sponsorship deck.pdf"
+            className="bg-violet-500 rounded-4xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px flex items-center gap-8px"
+            download
+          >
             Download Sponsorship Deck
             <img src="/svg/download.svg" alt="download icon" />
-          </button>
+          </a>
         </div>
       </section>
 
       <section className="bg-[url(/png/hersynergy-tribe-bg.png)] bg-cover bg-center px-24px py-48px lg:p-80px">
-        <div className="flex flex-col gap-24px items-center justify-center max-w-[1128px]">
+        <div className="flex flex-col gap-24px items-center justify-center max-w-[1128px] mx-auto">
           <p className="text-violet-500 text-24 lg:text-36 font-bold text-center">
             UnleashHER Potential Summit 2025 is your chance to connect, learn,
             and grow with HerSynergy’s inspiring community of women.
@@ -120,9 +124,13 @@ const SummitPage = () => {
             summit are designed to equip you with the knowledge, confidence, and
             connections to unlock your next chapter.
           </p>
-          <button className="bg-violet-500 rounded-4xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px flex items-center gap-8px">
+          <a
+            href="https://tix.africa/hersynergysummit"
+            target="_blank"
+            className="bg-violet-500 rounded-4xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px flex items-center gap-8px"
+          >
             Get Your Ticket
-          </button>
+          </a>
         </div>
       </section>
 
@@ -187,7 +195,7 @@ const SummitPage = () => {
                 className="rounded-xl lg:max-w-360px w-full bg-violet-50"
               >
                 <img src={`/png/${action.img}.png`} alt={action.title} />
-                <div className="p-24px flex flex-col gap-12px lg:gap-24px items-center justify-center">
+                <div className="p-24px flex flex-col gap-12px lg:gap-24px items-center justify-center lg:min-h-320px">
                   <h3 className="text-violet-500 font-bold text-16 lg:text-24 text-center uppercase">
                     {action.title}
                   </h3>
@@ -196,9 +204,13 @@ const SummitPage = () => {
                     {action.description}
                   </p>
 
-                  <button className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:py-16px mt-auto">
+                  <a
+                    href={action.link}
+                    target="_blank"
+                    className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:py-16px mt-auto"
+                  >
                     {action.buttonText}
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -234,9 +246,13 @@ const SummitPage = () => {
             ))}
           </div>
 
-          <button className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:py-16px mt-auto">
+          <a
+            href="https://tix.africa/hersynergysummit"
+            target="_blank"
+            className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:py-16px mt-auto"
+          >
             Get Your Tickets
-          </button>
+          </a>
         </div>
       </section>
 
@@ -284,9 +300,13 @@ const SummitPage = () => {
             ))}
           </div>
 
-          <button className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:px-48px lg:py-16px">
+          <a
+            href="https://forms.gle/yu4JvcKMSfWWBPUm8"
+            target="_blank"
+            className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:px-48px lg:py-16px"
+          >
             Become a sponsor
-          </button>
+          </a>
         </div>
       </section>
     </>

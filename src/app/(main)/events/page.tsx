@@ -81,7 +81,7 @@ const EventsPage = () => {
       <section className="bg-violet-50 px-24px py-48px lg:p-80px">
         <div className="max-w-[1128px] mx-auto">
           <h1 className="text-24 lg:text-36 font-bold text-violet-500 mb-24px">
-            Upcoming events
+            Upcoming event
           </h1>
 
           <img

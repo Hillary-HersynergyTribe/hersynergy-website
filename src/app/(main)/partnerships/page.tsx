@@ -70,6 +70,11 @@ const partnershipOpportunities = [
   },
 ];
 
+const impressions = [
+  { title: "20,000+", description: "Social Media Impressions" },
+  { title: "1,800+", description: "Women Reached" },
+  { title: "1,100+", description: "Social Impact Beneficiaries" },
+];
 const PartnershipsPage = () => {
   return (
     <>
@@ -102,27 +107,53 @@ const PartnershipsPage = () => {
               </div>
             ))}
           </div>
-          <button className="bg-violet-500 rounded-3xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px">
+          <a
+            href="https://forms.gle/yu4JvcKMSfWWBPUm8"
+            target="_blank"
+            className="bg-violet-500 rounded-3xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px"
+          >
             Donate Now
-          </button>
+          </a>
         </div>
       </section>
 
-      <section className="bg-[url(/png/partnership-bg-2.png)] bg-cover bg-center max-sm:bg-top p-24px lg:py-80px flex flex-col items-center gap-16px lg:gap-32px">
-        <h2 className=" text-24 lg:text-32 font-bold text-white text-center">
-          Ready to Create Impact?
-        </h2>
-        <p className="text-14 lg:text-18 text-white font-georgia text-center max-w-400px lg:max-w-744px">
-          Whether through partnership or volunteering, involvement creates
-          opportunities for women to thrive in tech and business.
-        </p>
-        <div className="flex items-center gap-24px">
-          <button className="bg-violet-500 rounded-4xl text-white font-semibold lg:font-bold text-16 w-fit px-24px py-8px lg:py-16px">
-            Partner With Us
-          </button>
-          <button className="bg-white rounded-4xl text-violet-500 font-semibold lg:font-bold text-16 w-fit px-24px py-8px lg:py-16px">
-            Volunteer Now
-          </button>
+      <section className="p-24px lg:p-80px">
+        <div className="mx-auto max-w-[1126px] bg-[url(/png/social-bg.png)] bg-center bg-cover rounded-xl">
+          <div className="bg-[rgba(182,154,175,0.8)] flex items-center max-sm:flex-wrap gap-24px lg:gap-56px rounded-xl py-24px lg:py-80px px-24px @max-lg:px-48px nav:px-120px">
+            <div className="rounded-xl border border-violet-500 bg-violet-50 w-full flex flex-col gap-24px p-16px lg:p-24px min-w-260px nav:min-w-356px ">
+              {impressions.map((impression) => (
+                <div
+                  className="flex flex-col gap-8px text-violet-500 text-center"
+                  key={impression.description}
+                >
+                  <h3 className="text-24 lg:text-36 font-bold">
+                    {impression.title}
+                  </h3>
+                  <p className="text-16 lg:text-20 font-georgia">
+                    {impression.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col gap-24px max-w-574px text-violet-800">
+              <h2 className="text-24 lg:text-36 font-bold">
+                Partner In Empowering Change
+              </h2>
+              <p className="text-16 lg:text-18">
+                Join forces with HerSynergy Tribe to create meaningful impact
+                and advance women’s careers across tech and business landscapes.{" "}
+              </p>
+
+              <a
+                href="https://forms.gle/yu4JvcKMSfWWBPUm8"
+                target="_blank"
+                className="bg-violet-50 border border-violet-500 rounded-4xl text-violet-500 font-bold text-16 w-fit px-24px py-16px mt-24px"
+              >
+                Get In Touch
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -150,7 +181,9 @@ const PartnershipsPage = () => {
                     className="h-100px w-fit"
                   />
 
-                  <h2 className="text-18 lg:text-24 font-bold capitalize">{o.title}</h2>
+                  <h2 className="text-18 lg:text-24 font-bold capitalize">
+                    {o.title}
+                  </h2>
                   <p className="text-14 lg:text-18">{o.description}</p>
                 </div>
               ))}
@@ -158,6 +191,28 @@ const PartnershipsPage = () => {
           </div>
         </section>
       ))}
+
+      <section className="bg-[url(/png/partnership-bg-2.png)] bg-cover bg-center max-sm:bg-top p-24px lg:py-80px flex flex-col items-center gap-16px lg:gap-32px">
+        <h2 className=" text-24 lg:text-32 font-bold text-white text-center">
+          Ready to Create Impact?
+        </h2>
+        <p className="text-14 lg:text-18 text-white font-georgia text-center max-w-400px lg:max-w-744px">
+          Whether through partnership or volunteering, involvement creates
+          opportunities for women to thrive in tech and business.
+        </p>
+        <div className="flex items-center gap-24px">
+          <a
+            href="https://forms.gle/yu4JvcKMSfWWBPUm8"
+            target="_blank"
+            className="bg-violet-500 rounded-4xl text-white font-semibold lg:font-bold text-16 w-fit px-24px py-8px lg:py-16px"
+          >
+            Partner With Us
+          </a>
+          {/* <button className="bg-white rounded-4xl text-violet-500 font-semibold lg:font-bold text-16 w-fit px-24px py-8px lg:py-16px">
+            Volunteer Now
+          </button> */}
+        </div>
+      </section>
     </>
   );
 };

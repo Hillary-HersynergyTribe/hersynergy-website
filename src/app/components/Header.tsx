@@ -32,7 +32,7 @@ const menuItems = [
   },
   {
     name: "Newsletter",
-    route: "/",
+    route: "/#newsletter",
   },
   {
     name: "Get Involved",
@@ -51,8 +51,16 @@ export const Header = () => {
     <header>
       <nav className="w-full py-16px px-24px z-50 fixed bg-white-100 shadow">
         <div className="flex justify-between items-center max-w-[1280px] w-full mx-auto">
+          <Link href="/" className="w-150px">
+            <img
+              src="/png/her-logo.png"
+              alt="hersynergy logo"
+              className="w-full"
+            />
+          </Link>
+
           <button
-            className="block absolute lg:hidden"
+            className="block lg:hidden"
             onClick={() => setShowMenu(!showMenu)}
           >
             {!showMenu && (
@@ -109,16 +117,8 @@ export const Header = () => {
             )}
           </button>
 
-          <Link href="/" className="ml-40px w-150px lg:ml-0">
-            <img
-              src="/svg/new-logo.svg"
-              alt="hersynergy logo"
-              className="w-full"
-            />
-          </Link>
-
           <ul
-            className={`max-lg:absolute max-lg:top-68px max-lg:left-20px max-lg:text-left max-lg:bg-white-50 max-lg:shadow-sm max-lg:rounded-10px max-lg:min-w-[250px] lg:flex lg:items-center lg:justify-end lg:bg-transparent max-lg:rounded-xl transition-all duration-500 ${
+            className={`max-lg:absolute max-lg:top-68px max-lg:right-20px max-lg:text-left max-lg:bg-white-50 max-lg:shadow-sm max-lg:rounded-10px max-lg:min-w-[250px] lg:flex lg:items-center lg:justify-end lg:bg-transparent max-lg:rounded-xl transition-all duration-500 ${
               showMenu
                 ? "max-lg:h-fit max-lg:block max-lg:z-50"
                 : "max-lg:hidden max-lg:h-0"

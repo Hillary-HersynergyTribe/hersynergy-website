@@ -169,14 +169,16 @@ const OurImpact = () => {
                       once: true,
                     }}
                     key={achievement.title}
-                    className="bg-violet-900 rounded-xl p-12px lg:p-32px flex flex-col text-white gap-24px capitalize"
+                    className="bg-violet-900 rounded-xl p-12px lg:p-32px flex flex-col text-white gap-24px "
                   >
                     <img
                       src={`/png/${achievement.img}.png`}
                       alt={achievement.img}
                     />
-                    <h4 className="text-24 font-bold">{achievement.title}</h4>
-                    <p className="text-20 font-georgia">
+                    <h4 className="text-24 font-bold capitalize">
+                      {achievement.title}
+                    </h4>
+                    <p className="text-18 font-light font-georgia">
                       {achievement.description}
                     </p>
                   </motion.div>

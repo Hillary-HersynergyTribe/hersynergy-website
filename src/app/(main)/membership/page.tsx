@@ -47,23 +47,23 @@ const MembershipPage = () => {
       <PageHeader title="membership" bgImage="membership"></PageHeader>
 
       <section className="bg-[url(/png/Membership.png)] bg-cover bg-center p-24px lg:p-80px">
-        <h1 className="text-32 lg:text-48 lg:leading-[150%] text-center font-bold text-violet-500 max-w-[1132px] mx-auto mb-24px">
+        <h1 className="text-24 lg:text-48 lg:leading-[150%] text-center font-bold text-violet-500 max-w-[1132px] mx-auto mb-24px">
           Become part of a thriving community of women who are redefining the
           tech industry.
         </h1>
 
-        <p className="text-20 lg:text-28 font-georgia text-center max-w-928px mx-auto">
+        <p className="text-18 lg:text-28 font-georgia text-center max-w-928px mx-auto">
           At HerSynergy Tribe, our membership is more than just access, it’s
           about connection, growth, and empowerment.
         </p>
       </section>
 
       <section className="bg-violet-50 p-24px lg:p-80px flex flex-col gap-24px justify-center items-center">
-        <div className="flex justify-center gap-24px lg:gap-32px">
+        <div className="flex flex-wrap justify-center gap-24px lg:gap-32px">
           {benefits.map((benefit) => (
             <div
               key={benefit.img}
-              className={`rounded-xl lg:max-w-382px w-full odd:bg-[url(/png/card-bg-2.png)] even:bg-[url(/png/card-bg-1.png)] bg-bottom bg-cover rounded-b-2xl transition-all duration-500 ease-in-out hover:cursor-pointer hover:shadow-popUp`}
+              className={`rounded-xl max-w-382px max-[770px]:max-w-320px w-full odd:bg-[url(/png/card-bg-2.png)] even:bg-[url(/png/card-bg-1.png)] bg-bottom bg-cover rounded-b-2xl transition-all duration-500 ease-in-out hover:cursor-pointer hover:shadow-popUp`}
             >
               <img src={`/png/${benefit.img}.png`} alt={`${benefit.img}-img`} />
               <div className="p-24px">
@@ -78,9 +78,13 @@ const MembershipPage = () => {
           ))}
         </div>
 
-        <button className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:px-48px lg:py-16px">
+        <a
+          href="https://forms.gle/XK5KF2oCxsSUc2oE6"
+          target="_blank"
+          className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:px-48px lg:py-16px"
+        >
           Join Our Tribe
-        </button>
+        </a>
       </section>
 
       <section className="bg-blue-50 p-24px lg:p-80px">

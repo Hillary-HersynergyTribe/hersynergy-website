@@ -37,14 +37,13 @@ const conversations = [
   Also big thanks to <span className="!text-green-700">@Hillary</span> and <span className="!text-green-700">@Tolu Ajibola</span> for creating this group. You’re adding so so much valueeeee...”`,
   `“I had such an amazing time! Thank you so much all for the vulnerability with sharing your stories from Tochi’s story to learning “scaring efficient” to our crypto argument. It was really the best way to end the year for me. Looking forward to our wins in 2025 and more physical meet ups.”`,
   `“Thank you <span className="!text-green-700">@Hillary Omitogun</span> and <span className="!text-green-700">@Tolu A.</span>  for organising and driving this! The kids were really excited to receive the items. I’m honestly, really excited about the impact we can make with this community!`,
-  `“I never ever regret joining any session. So much and quality. So much value and quality. Thank you! <span className="!text-green-700">@Hillary Omitogun</span>`,
-  `“Hi Ladies!
-  Just got a new job and wanted to give a public shoutout to <span className="!text-green-700">@Tamilore</span> for the Remote Buddy bot. It helped a lot in my applications. Also @Chidubem I followed your portfolio (with some ideas for the company) hack and got a call back).<br/>
-  
-  Also big thanks to <span className="!text-green-700">@Hillary</span> and <span className="!text-green-700">@Tolu Ajibola</span> for creating this group. You’re adding so so much valueeeee...”`,
-  `“I lhad such an amazing time! Thank you so much all for the vulnerability with sharing your stories from Tochi’s story to learning “scaring efficient” to our crypto argument. It was really the best way to end the year for me. Looking forward to our wins in 2025 and more physical meet ups.”`,
-  `“Thank you <span className="!text-green-700">@Hillary Omitogun</span> and <span className="!text-green-700">@Tolu A.</span>  for organising and driving this! The kids were really excited to receive the items. I’m honestly, really excited about the impact we can make with this community!`,
 
+  `Hiii! The email🥹🥹🥹 -- I love it so much! It's the perfect start to my morning. I'm looking forward to all we achieve as a community in 2025 ✨🎉🎉❤️❤️`,
+  `I love this community! I'm so happy seeing the pictures and supports🫶🏼❤️`,
+  // ``,
+  // ``,
+  // ``,
+  // ``,
   // ``,
   // ``,
   // ``,
@@ -221,7 +220,7 @@ const AboutUs = () => {
         <div className="max-w-[1128px] mx-auto flex items-center max-md:flex-wrap justify-between gap-24px lg:gap-48px">
           <div className="w-full max-nav:max-w-400px">
             <img
-              src="/png/creating-a-sustainab;e-movement.png"
+              src="/png/creating-a-sustainable-movement.png"
               alt="creating-a-sustainable-movement"
               className="w-full"
             />
@@ -234,9 +233,13 @@ const AboutUs = () => {
               We’re building more than a community. We’re creating a movement
               where women support each other to achieve their dreams.
             </p>
-            <button className="bg-violet-500 rounded-2xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:py-16px">
+            <a
+              href="https://forms.gle/XK5KF2oCxsSUc2oE6"
+              target="_blank"
+              className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:py-16px"
+            >
               Start your journey
-            </button>
+            </a>
           </div>
         </div>
       </section>

@@ -143,9 +143,13 @@ const MentorshipPage = () => {
           <p className="text-16 lg:text-20 text-center text-white">
             Apply to be a HerSynergy Tribe mentor in a few clicks!
           </p>
-          <button className="bg-white rounded-3xl text-violet-500 text-14 lg:text-18 font-bold w-fit px-24px py-12px lg:px-48px lg:py-16px flex items-center gap-8px">
+          <a
+            href="https://forms.gle/yu4JvcKMSfWWBPUm8"
+            target="_blank"
+            className="bg-white rounded-3xl text-violet-500 text-14 lg:text-18 font-bold w-fit px-24px py-12px lg:px-48px lg:py-16px flex items-center gap-8px"
+          >
             Become a mentor
-          </button>
+          </a>
         </div>
       </section>
 
@@ -155,13 +159,17 @@ const MentorshipPage = () => {
             Meet our mentees
           </h2>
 
-          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24px  ">
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24px">
             {displayedMentees.map((mentee) => (
               <div
                 key={mentee.img}
                 className="rounded-xl border border-violet-500 relative"
               >
-                <img src={`/png/mentees/${mentee.img}.png`} alt={mentee.name} className="rounded-[10px]" />
+                <img
+                  src={`/png/mentees/${mentee.img}.png`}
+                  alt={mentee.name}
+                  className="rounded-[10px]"
+                />
 
                 <div className="absolute bottom-20px left-1/2 -translate-x-1/2 rounded-xl py-4px px-24px bg-violet-500 border border-violet-50 text-violet-50 text-center">
                   <p className="text-14 lg:text-16 font-semibold whitespace-nowrap">
@@ -197,13 +205,17 @@ const MentorshipPage = () => {
             Get To Know Our Mentors
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24px  ">
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24px">
             {displayedMentors.map((mentor) => (
               <div
                 key={mentor.img}
                 className="rounded-xl border border-violet-500 relative"
               >
-                <img src={`/png/mentors/${mentor.img}.png`} alt={mentor.name} className="rounded-[10px]" />
+                <img
+                  src={`/png/mentors/${mentor.img}.png`}
+                  alt={mentor.name}
+                  className="rounded-[10px]"
+                />
 
                 <div className="absolute bottom-20px left-1/2 -translate-x-1/2 rounded-xl py-4px px-24px bg-violet-500 border border-violet-50 text-violet-50 text-center">
                   <p className="text-14 lg:text-16 font-semibold whitespace-nowrap">

@@ -2,39 +2,46 @@ import Link from "next/link";
 
 const quickLinks = [
   { link: "/", title: "Home", type: "internal" },
-  { link: "/", title: "About Us", type: "internal" },
-  { link: "/", title: "Membership", type: "internal" },
-  { link: "/", title: "Events", type: "internal" },
-  { link: "/", title: "Contact Us", type: "internal" },
+  { link: "/about-us", title: "About Us", type: "internal" },
+  // { link: "/", title: "Membership", type: "internal" },
+  { link: "/events", title: "Events", type: "internal" },
+  {
+    link: "https://forms.gle/yu4JvcKMSfWWBPUm8",
+    title: "Contact Us",
+    type: "external",
+  },
 ];
 
 const getInvolvedLinks = [
   {
-    link: "/",
+    link: "/membership",
     title: "Become a Member",
     type: "internal",
   },
   {
-    link: "/",
+    link: "/mentorship",
     title: "Mentorship Program",
     type: "internal",
   },
   {
-    link: "/",
+    link: "/partnerships",
     title: "Partner With Us",
     type: "internal",
   },
-  {
-    link: "/",
-    title: "Resources",
-    type: "internal",
-  },
+  // {
+  //   link: "/",
+  //   title: "Resources",
+  //   type: "internal",
+  // },
 ];
 
 const socialLinks = [
-  { social: "Instagram", link: "/" },
-  { social: "Twitter", link: "/" },
-  { social: "Linkedin", link: "/" },
+  { social: "Instagram", link: "https://www.instagram.com/hersynergytribe/" },
+  { social: "Twitter", link: "https://x.com/hersynergy/" },
+  {
+    social: "Linkedin",
+    link: "https://www.linkedin.com/company/hersynergy-tribe/",
+  },
 ];
 export const Footer = () => {
   return (
@@ -43,7 +50,7 @@ export const Footer = () => {
         <div className="lg:max-w-192px w-full">
           <div className="flex flex-col gap-12px mb-24px lg:mb-40px">
             <Link href="/">
-              <img src="/svg/logo.svg" alt="hersynergy logo" />
+              <img src="/png/her-logo.png" alt="hersynergy logo" />
             </Link>
             <p className="text-violet-500 text-12 font-georgia">
               Empowering women in tech to connect, innovate, and lead.
@@ -53,9 +60,12 @@ export const Footer = () => {
               of tech.
             </p>
 
-            <button className="bg-violet-500 rounded-2xl text-white text-14 w-fit px-16px py-8px">
+            <Link
+              href="/about-us"
+              className="bg-violet-500 rounded-2xl text-white text-14 w-fit px-16px py-8px"
+            >
               Learn more about us
-            </button>
+            </Link>
           </div>
           <p className="text-violet-500 text-16 font-semibold mb-12px">
             Connect With Us:
@@ -91,19 +101,28 @@ export const Footer = () => {
           </p>
 
           {getInvolvedLinks.map((link) => (
-            <Link
-              key={link.title}
-              href={link.link}
-              className="text-16 text-violet-500 font-georgia"
-            >
-              {link.title}
-            </Link>
+            <div key={link.title}>
+              {link.type === "internal" ? (
+                <Link
+                  href={link.link}
+                  className="text-16 text-violet-500 font-georgia"
+                >
+                  {link.title}
+                </Link>
+              ) : (
+                <a
+                  href={link.link}
+                  target="_blank"
+                  className="text-16 text-violet-500 font-georgia"
+                ></a>
+              )}
+            </div>
           ))}
         </div>
 
         <div className="lg:max-w-264px w-full">
           <p className="text-violet-500 text-16 font-semibold mb-12px">
-            Subscribe to our Newsletter!☺️
+            Subscribe to our Newsletter
           </p>
 
           <form className="flex flex-col gap-8px mb-24px lg:mb-40px">
@@ -120,7 +139,9 @@ export const Footer = () => {
           <p className="text-violet-500 text-16 font-semibold mb-12px">
             Contact Us
           </p>
-          <p className="text-violet-500 text-16">Email: info@hersynergy.com</p>
+          <p className="text-violet-500 text-16">
+            Email: hillary@hersynergy.com OR tolu@hersynergy.com
+          </p>
         </div>
       </div>
       <p className="flex items-center justify-center gap-4px flex-wrap mt-24px text-center text-16 max-lg:text-12 text-violet-500 uppercase">
