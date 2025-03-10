@@ -9,7 +9,8 @@ const fuelingGrowthCards = [
     description:
       "Whether guiding women with your expertise or assisting at events, your volunteer efforts fuel our mission of empowerment.",
     button: "Become a volunteer",
-    link: "",
+    link: "https://forms.gle/yu4JvcKMSfWWBPUm8",
+    type: "external",
     buttonColor: "bg-[#735954]",
     titleColor: "text-[#735954]",
   },
@@ -18,7 +19,8 @@ const fuelingGrowthCards = [
     description:
       "Be the bridge to success-mentor women as they navigate the complexities of mid-to-senior-level careers.",
     button: "Be a mentor",
-    link: "",
+    link: "/mentorship",
+    type: "internal",
     buttonColor: "bg-violet-600",
     titleColor: "text-violet-600",
   },
@@ -27,7 +29,8 @@ const fuelingGrowthCards = [
     description:
       "Partner with us to tap into a community of impressive women in tech who are passionate about growth and impact.",
     button: "Partner with us",
-    link: "",
+    link: "partnerships",
+    type: "internal",
     buttonColor: "bg-[#2B3645]",
     titleColor: "text-[#2B3645]",
   },
@@ -328,11 +331,23 @@ export default function Home() {
                 <p className="text-18 font-georgia text-left max-w-290px">
                   {card.description}
                 </p>
-                <button
-                  className={`px-24px py-16px rounded-2xl text-white ${card.buttonColor}`}
-                >
-                  {card.button}
-                </button>
+
+                {card.type === "internal" ? (
+                  <Link
+                    href={card.link}
+                    className={`px-24px py-16px rounded-2xl text-white ${card.buttonColor}`}
+                  >
+                    {card.button}
+                  </Link>
+                ) : (
+                  <a
+                    href={card.link}
+                    target="_blank"
+                    className={`px-24px py-16px rounded-2xl text-white ${card.buttonColor}`}
+                  >
+                    {card.button}
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -360,12 +375,13 @@ export default function Home() {
             ))}
           </ol>
 
-          <Link
-            href="/membership"
+          <a
+            href="https://forms.gle/XK5KF2oCxsSUc2oE6"
+            target="_blank"
             className="bg-violet-500 rounded-4xl text-white text-16 w-fit px-24px py-16px mt-24px"
           >
             Become a member
-          </Link>
+          </a>
         </div>
       </div>
       {/* membership spotlight */}

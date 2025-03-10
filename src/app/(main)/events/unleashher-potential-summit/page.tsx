@@ -70,12 +70,12 @@ const attendees = [
       "E-commerce business owners, tech startup founders, and operations leads looking to scale their businesses.",
   },
   {
-    title: "Early to Mid-Career Professionals in Non - Tech Industries:",
+    title: "Early to Mid-Career Professionals in All Industries:",
     description:
       "Marketing  specialists, HR managers,  financial analysts, and social media managers focused on  advancing their careers and building leadership skills.",
   },
   {
-    title: "Mid to Senior - Level Professionals in Creative Industries:",
+    title: "Mid to Senior-Level Professionals in Creative Industries:",
     description:
       "Brand strategists,  product managers, UX designers, CTOs , and consultants aiming to drive  innovation and expand their impact.",
   },

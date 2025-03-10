@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { PageHeader } from "../../components/PageHeader";
+import { Testimonials } from "@/app/components/Testimonials";
 
 const mentees = [
   { img: "Tosin Adewunmi", name: "Tosin Adewunmi", role: "Product Management" },
@@ -123,6 +124,84 @@ const mentors = [
   { img: "Ruth Odu", name: "Ruth Odu", role: "Product Designer" },
 ];
 
+const menteeTestimonies = [
+  {
+    img: "Nafisat Aliyu",
+    name: "Nafisat Aliyu",
+    role: "Data Analysis",
+    title: "“I Had An Exceptional Mentor!” ",
+    description:
+      "“I had an exceptional mentor who guided me on my data engineering journey. She simplified complex concepts, inspired confidence, and consistently pushed me to excel. I’m incredibly grateful for the knowledge she has imparted, which will stay with me throughout my career. Thank you, HerSynergy Tribe, for organizing this wonderful program.”",
+  },
+  {
+    img: "Jessica Correa Ochoa",
+    name: "Jessica Correa Ochoa",
+    role: "Data Analysis",
+    title: "“I Really Enjoyed My Mentorship!”",
+    description:
+      "“I really enjoyed the mentorship and feel like I've significantly improved my skills in data analytics. My mentor, Fola, is amazing; she helped me explore various career paths in data analytics and guided me on how to pursue them. I am deeply grateful to her and for this incredible mentoring opportunity.”",
+  },
+  {
+    img: "Moyinoluwa Anifowose",
+    name: "Moyinoluwa Anifowose",
+    role: "Product Manager",
+    title: "“A Safe Space for Every Woman in Tech!” ",
+    description:
+      "“The mentorship program was a smooth journey. My mentor’s guidance throughout this experience is something I do not take for granted. I am grateful to her for being so generous with her knowledge. She’s a mirror of possibilities! I look forward to an amazing relationship even after the program wraps up. I am such a fan!”",
+  },
+  {
+    img: "Favour Ebube Obi",
+    name: "Favour Ebube Obi",
+    role: "UX Writing",
+    title: "“It Was Impactful!”",
+    description:
+      "“I truly appreciate being part of this mentorship program and all the effort HerSynergy Tribe put into making it impactful. The patience, encouragement, and genuine care from my mentor made me feel seen and supported every step of the way.”",
+  },
+  {
+    img: "Mirabella-Paulicia",
+    name: "Mirabella-Paulicia",
+    role: "UX Writing",
+    title: "“It Was A Refreshing Experience!”",
+    description:
+      "“The program was a refreshing experience. My mentor tailored our sessions perfectly to align with my career path, sharing insights I didn’t even realize I needed until they proved incredibly helpful.”",
+  },
+];
+
+const mentorTestimonies = [
+  {
+    img: "Busolami Kehinde",
+    name: "Busolami Kehinde",
+    role: "Product Manager",
+    title: "“It Was A Refreshing Experience!” ",
+    description:
+      "“The most rewarding part of the mentorship program for me has been witnessing my mentee’s growth and seeing how far they’ve come in such a short time.”",
+  },
+  {
+    img: "Sade Onabowale",
+    name: "Sade Onabowale",
+    role: "Product Operations",
+    title: "“It’s Been Eye-Opening & Fulfilling!”",
+    description:
+      "“It’s been eye-opening to understand the areas where people need support, especially since many local schools don’t provide adequate guidance during or after graduation. It’s been fulfilling to shepherd one of my mentees as she prepares for a new role and works on upskilling herself.”",
+  },
+  {
+    img: "Chiamaka Eneje",
+    name: "Chiamaka Eneje",
+    role: "UX Writing",
+    title: "“Being A Mentor Has Refined My Skillsl!”",
+    description:
+      "“Being a mentor in HerSynergy’s mentorship program has helped me refine my own understanding of the hard skills required in my industry.”",
+  },
+  {
+    img: "Jeniffer Echenim",
+    name: "Jeniffer Echenim",
+    role: "Software Engineer",
+    title: "“Such A Meaningful Experience!”",
+    description:
+      "“Offering solutions to challenges my mentees encounter during their assignments and guiding them on how to collaborate effectively with teams has been such a meaningful experience” ",
+  },
+];
+
 const MentorshipPage = () => {
   const [showMore, setShowMore] = useState(false);
   const [showMoreMentor, setShowMoreMentor] = useState(false);
@@ -199,6 +278,15 @@ const MentorshipPage = () => {
         </div>
       </section>
 
+      <section className="bg-blue-50 py-48px lg:py-80px">
+        <Testimonials
+          title="Here’s What Some Mentees Have
+          Said About The Program:"
+          type="mentees"
+          testimonials={menteeTestimonies}
+        ></Testimonials>
+      </section>
+
       <section className="bg-[url(/png/impact-bg.png)] bg-cover px-24px py-48px lg:p-80px">
         <div className="max-w-[1122px] mx-auto flex flex-col items-center gap-24px">
           <h2 className="text-24 lg:text-32 font-bold text-violet-500">
@@ -245,7 +333,13 @@ const MentorshipPage = () => {
         </div>
       </section>
 
-      <section className="bg-blue-100"></section>
+      <section className="bg-blue-100 py-48px lg:py-80px">
+        <Testimonials
+          title="Here’s What Some Mentors & Members Have Said About The Program:"
+          type="mentors"
+          testimonials={mentorTestimonies}
+        ></Testimonials>
+      </section>
     </>
   );
 };

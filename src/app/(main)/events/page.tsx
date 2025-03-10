@@ -13,7 +13,7 @@ const memberMeetups = [
     img: "member-meetup-2",
     name: "BTF 2024",
     type: "Member Meetup",
-    date: "March 2024",
+    date: "Oct 2024",
     location: "London",
   },
   {

@@ -39,10 +39,24 @@ const conversations = [
   `“Thank you <span className="!text-green-700">@Hillary Omitogun</span> and <span className="!text-green-700">@Tolu A.</span>  for organising and driving this! The kids were really excited to receive the items. I’m honestly, really excited about the impact we can make with this community!`,
 
   `Hiii! The email🥹🥹🥹 -- I love it so much! It's the perfect start to my morning. I'm looking forward to all we achieve as a community in 2025 ✨🎉🎉❤️❤️`,
-  `I love this community! I'm so happy seeing the pictures and supports🫶🏼❤️`,
-  // ``,
-  // ``,
-  // ``,
+  `I love this community! I'm so happy seeing the pictures and support🫶🏼❤️`,
+  `@Hillary just wanted to let you know that the group is such a great idea. i’m so inspired by you and your attention to detail! 
+
+  It’s so great seeing all you’re doing, and looking fabulous while doing it!`,
+  `- It was refreshing hearing everyone talk about their gratitude list & catch word for 2025. I was excited to meet everyone especially my new connections @⁨~Temi F.⁩ @⁨~Toun Adereni⁩ 🤍🤍🤍
+
+  + everyone looked so good, omggg😍.
+  
+  Thank you @⁨Tolu Ajibola 🚺⁩ @⁨Hillary 🦋⁩ for putting this together.
+  
+  - 🥺 A lot has really happened this year.
+  Thank you @⁨Hillary 🦋⁩ and @⁨Tolu Ajibola 🚺⁩ for this community 
+  
+  Thank you @⁨Chidi Uguru⁩ for telling me about it 🤗🤗`,
+  `It was refreshing hearing everyone talk about their gratitude list & catch word for 2025. I was excited to meet everyone especially my new connections @ ~Temi F. @ ~ Toun
+  Adereni
+  + everyone looked so good, omggg
+  Thank you @Tolu Ajibola for putting this together.`,
   // ``,
   // ``,
   // ``,
@@ -96,7 +110,7 @@ const AboutUs = () => {
           Women make up only 28% of C-suite positions, with even fewer Black
           women represented. The path to senior leadership can feel isolating,
           with limited mentorship, fewer opportunities, and the constant
-          challenge of negotiating for equitable pay.  <br />
+          challenge of negotiating for equitable pay.  <br /><br />
           HerSynergy Tribe was founded in September 2023 to address these
           challenges by creating a supportive community where women can access
           mentorship, resources, and genuine connections to propel their careers

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const menuItems = [
@@ -46,7 +47,18 @@ const menuItems = [
 export const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [currentRoute, setCurrentRoute] = useState("Home");
+  const pathname = usePathname();
+  // const isRouteActive = () => {
+  //   const routes = menuItems.flatMap((menu) => menu);
 
+  //   console.log(routes);
+
+  //   return childrenRoutes?.some((route) => pathname.includes(route.route));
+
+  //   return false;
+  // };
+
+  // const isMenuActive = isRouteActive();
   return (
     <header>
       <nav className="w-full py-16px px-24px z-50 fixed bg-white-100 shadow">
@@ -197,15 +209,23 @@ export const Header = () => {
             ))}
 
             <li className="px-12px py-8px block lg:hidden">
-              <button className="bg-violet-500 rounded-2xl text-white text-12 w-fit px-24px py-8px">
+              <a
+                href="https://forms.gle/XK5KF2oCxsSUc2oE6"
+                target="_blank"
+                className="bg-violet-500 rounded-2xl text-white text-12 w-fit px-24px py-8px"
+              >
                 Join Now
-              </button>
+              </a>
             </li>
           </ul>
 
-          <button className="bg-violet-500 rounded-3xl text-white font-semibold text-14 lg:block w-fit px-24px py-12px hidden whitespace-nowrap">
+          <a
+            href="https://forms.gle/XK5KF2oCxsSUc2oE6"
+            target="_blank"
+            className="bg-violet-500 rounded-3xl text-white font-semibold text-14 lg:block w-fit px-24px py-12px hidden whitespace-nowrap"
+          >
             Join Now
-          </button>
+          </a>
         </div>
       </nav>
 

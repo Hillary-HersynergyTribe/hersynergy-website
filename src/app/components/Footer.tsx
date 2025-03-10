@@ -140,7 +140,7 @@ export const Footer = () => {
             Contact Us
           </p>
           <p className="text-violet-500 text-16">
-            Email: hillary@hersynergy.com OR tolu@hersynergy.com
+            Email: inquiries@hersynergy.com
           </p>
         </div>
       </div>
