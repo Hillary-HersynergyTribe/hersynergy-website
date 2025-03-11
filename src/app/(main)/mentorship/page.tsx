@@ -24,7 +24,7 @@ const mentees = [
   },
   { img: "Pamimo Johnson", name: "Pamimo Johnson", role: "Marketing & Comms." },
   { img: "Nafisat Aliyu", name: "Nafisat Aliyu", role: "Data Analysis" },
-  { img: "Oyinye Uchenna", name: "Oyinye Uchenna", role: "Marketing" },
+  { img: "Oyinye Uchenna", name: "Onyinye Uchenna", role: "Operations" },
   { img: "Lucy Obahor", name: "Lucy Obahor", role: "Software Engineering" },
   { img: "Bilkisu Garba", name: "Bilkisu Garba", role: "Product Design" },
   {
@@ -80,7 +80,7 @@ const mentees = [
   },
   {
     img: "Boluwatife Olorun",
-    name: "Boluwatife Olorun",
+    name: "Boluwatife Oloruntola",
     role: "Growth Product Mgt.",
   },
 ];

@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import MapChart from "../components/MapChart";
 
 const highlights = [
-  { title: "150+", description: "Active members from all across EMEA" },
+  { title: "250+", description: "Active members from all across EMEA" },
   {
     title: "200+",
     description: "Jobs & internships shared through the network",
   },
   { title: "$5K", description: "Raised for students & young girls" },
-  { title: "30+", description: "Women mentored in multiple tech fields" },
+  { title: "50+", description: "Women mentored in multiple tech fields" },
 ];
 
 const fuelingGrowthCards = [
@@ -95,6 +95,7 @@ const brands = [
   { name: "microsoft", link: "https://www.microsoft.com/" },
   { name: "ayden", link: "https://www.adyen.com/" },
   { name: "norebase", link: "https://norebase.com/" },
+  { name: "spotify", link: "https://spotify.com/" },
 ];
 
 const testimonials = [
@@ -121,6 +122,14 @@ const testimonials = [
     title: "“A Safe Space for Every Woman in Tech!”",
     description:
       "“I love the honesty, vulnerability, and intelligence of the women in the community.”",
+  },
+  {
+    img: "Nmesoma Okonkwo",
+    name: "Nmesoma Okonkwo",
+    role: "Senior Product Designer, Fundall",
+    title: "“A Tribe That Truly Supports Your Growth”",
+    description:
+      "“HerSynergy is a safe space where women genuinely pour into each other. No matter what you’re going through, you’ll find women who are ready to listen, support, guide, and uplift you.”",
   },
 ];
 
@@ -397,11 +406,11 @@ export default function Home() {
         <h1 className="text-24 lg:text-36 text-violet-500 font-bold text-center">
           Our Global Impact, One Connection at a Time
         </h1>
-        <div className="max-w-[1180px] mx-auto lg:pr-120px -mt-48px">
+        <div className="max-w-[1180px] mx-auto lg:pr-120px lg:-mt-48px">
           <MapChart></MapChart>
         </div>
 
-        <div className="p-24px rounded-xl bg-violet-100 flex max-md:flex-wrap items-center justify-center gap-16px max-w-788px mx-auto -mt-120px">
+        <div className="p-12px lg:p-24px rounded-xl bg-violet-100 grid grid-cols-1 max-md:grid-cols-2  max-lg:grid-cols-4  items-center justify-center gap-16px max-w-788px mx-auto lg:-mt-120px">
           {highlights.map((highlight) => (
             <div
               key={highlight.title}
@@ -464,13 +473,18 @@ export default function Home() {
             professionals passionate about innovation.
           </p>
 
-          <ol className="list-disc">
+          <div className="flex flex-col">
             {spotlightFeatures.map((feature) => (
-              <li key={feature} className="text-16 font-georgia">
-                {feature}
-              </li>
+              <div key={feature} className="flex items-center gap-8px">
+                <img
+                  src="/svg/Ellipse.svg"
+                  alt="list icon"
+                  className="h-4px w-4px"
+                />
+                <p className="text-16 font-georgia">{feature}</p>
+              </div>
             ))}
-          </ol>
+          </div>
 
           <a
             href="https://forms.gle/XK5KF2oCxsSUc2oE6"

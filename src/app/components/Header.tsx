@@ -48,17 +48,19 @@ export const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [currentRoute, setCurrentRoute] = useState("Home");
   const pathname = usePathname();
-  // const isRouteActive = () => {
-  //   const routes = menuItems.flatMap((menu) => menu);
 
-  //   console.log(routes);
+  console.log(pathname);
+  const isRouteActive = () => {
+    const cRoutes = menuItems.map((menu) => menu.children);
 
-  //   return childrenRoutes?.some((route) => pathname.includes(route.route));
+    console.log(cRoutes);
 
-  //   return false;
-  // };
+  //  const act = 
 
-  // const isMenuActive = isRouteActive();
+    return false;
+  };
+
+  const isMenuActive = isRouteActive();
   return (
     <header>
       <nav className="w-full py-16px px-24px z-50 fixed bg-white-100 shadow">
