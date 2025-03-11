@@ -1,4 +1,6 @@
+"use client";
 import { PageHeader } from "../../../components/PageHeader";
+import { motion } from "framer-motion";
 
 const summitActions = [
   {
@@ -95,11 +97,28 @@ const SummitPage = () => {
             A Transformative Summit for Women Ready to Achieve More
           </h1>
 
-          <img
-            src="/png/unleash-summit-lg.png"
-            alt="unleashher image"
-            className="rounded-xl"
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 5 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 1.2,
+                delay: 0,
+                ease: [0.44, 0, 0, 1],
+              },
+            }}
+            viewport={{
+              amount: "some",
+              once: true,
+            }}
+          >
+            <img
+              src="/png/unleash-summit-lg.png"
+              alt="unleashher image"
+              className="rounded-xl"
+            />
+          </motion.div>
 
           <a
             href="/pdf/sponsorship deck.pdf"
@@ -113,7 +132,23 @@ const SummitPage = () => {
       </section>
 
       <section className="bg-[url(/png/hersynergy-tribe-bg.png)] bg-cover bg-center px-24px py-48px lg:p-80px">
-        <div className="flex flex-col gap-24px items-center justify-center max-w-[1128px] mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1.2,
+              delay: 0,
+              ease: [0.44, 0, 0, 1],
+            },
+          }}
+          viewport={{
+            amount: "some",
+            once: true,
+          }}
+          className="flex flex-col gap-24px items-center justify-center max-w-[1128px] mx-auto"
+        >
           <p className="text-violet-500 text-24 lg:text-36 font-bold text-center">
             UnleashHER Potential Summit 2025 is your chance to connect, learn,
             and grow with HerSynergy’s inspiring community of women.
@@ -131,7 +166,7 @@ const SummitPage = () => {
           >
             Get Your Ticket
           </a>
-        </div>
+        </motion.div>
       </section>
 
       <section className="bg-[url(/png/hersynergy-tribe-bg.png)] bg-cover bg-center ">
@@ -189,8 +224,22 @@ const SummitPage = () => {
           </h2>
 
           <div className="flex max-md:flex-wrap gap-24px">
-            {summitActions.map((action) => (
-              <div
+            {summitActions.map((action, i) => (
+              <motion.div
+                initial={{ opacity: 0, y: 5 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 1.2,
+                    delay: i * 0.1,
+                    ease: [0.44, 0, 0, 1],
+                  },
+                }}
+                viewport={{
+                  amount: "some",
+                  once: true,
+                }}
                 key={action.img}
                 className="rounded-xl lg:max-w-360px w-full bg-violet-50"
               >
@@ -212,7 +261,7 @@ const SummitPage = () => {
                     {action.buttonText}
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -231,8 +280,21 @@ const SummitPage = () => {
             fresh perspectives, this event is for you.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-24px">
-            {attendees.map((attendee) => (
-              <div
+            {attendees.map((attendee, i) => (
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 1.2,
+                    delay: i * 0.05,
+                    ease: [0.44, 0, 0, 1],
+                  },
+                }}
+                viewport={{
+                  amount: "some",
+                  once: true,
+                }}
                 key={attendee.title}
                 className="bg-white rounded-xl p-24px flex flex-col gap-24px"
               >
@@ -242,7 +304,7 @@ const SummitPage = () => {
                 <p className="text-14 lg:text-20 font-georgia">
                   {attendee.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -263,15 +325,32 @@ const SummitPage = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24px">
-            {topics.map((topic) => (
-              <div className="relative h-174px" key={topic.topic}>
+            {topics.map((topic, i) => (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 1.2,
+                    delay: i * 0.05,
+                    ease: [0.44, 0, 0, 1],
+                  },
+                }}
+                viewport={{
+                  amount: "some",
+                  once: true,
+                }}
+                className="relative h-174px"
+                key={topic.topic}
+              >
                 <img src={`/png/${topic.img}.png`} alt={topic.topic} />
                 <div className="bg-violet-50 rounded-xl p-8px absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:min-w-200px">
                   <p className="text-center font-bold text-violet-500 text-14">
                     {topic.topic}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -284,8 +363,22 @@ const SummitPage = () => {
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-24px">
-            {sponsorTips.map((tip) => (
-              <div
+            {sponsorTips.map((tip, i) => (
+              <motion.div
+                initial={{ opacity: 0, y: -5 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 1.2,
+                    delay: i * 0.05,
+                    ease: [0.44, 0, 0, 1],
+                  },
+                }}
+                viewport={{
+                  amount: "some",
+                  once: true,
+                }}
                 key={tip.img}
                 className={`rounded-xl p-24px flex flex-col items-center gap-8px ${tip.class}`}
               >
@@ -296,7 +389,7 @@ const SummitPage = () => {
                 </h3>
 
                 <p className="text-14 lg:text-16">{tip.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
 

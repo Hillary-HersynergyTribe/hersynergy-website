@@ -165,7 +165,7 @@ export const Header = () => {
                     </Link>
                   ) : (
                     <span
-                      className={`text-violet-500 text-16 font-semibold ${
+                      className={`text-violet-500 text-16 font-semibold hover:cursor-pointer ${
                         currentRoute === link.name
                           ? "max-lg:font-bold"
                           : "font-semibold"

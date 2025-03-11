@@ -49,15 +49,47 @@ const MembershipPage = () => {
       <PageHeader title="membership" bgImage="membership"></PageHeader>
 
       <section className="bg-[url(/png/Membership.png)] bg-cover bg-center p-24px lg:p-80px">
-        <h1 className="text-24 lg:text-48 lg:leading-[150%] text-center font-bold text-violet-500 max-w-[1132px] mx-auto mb-24px">
+        <motion.h1
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.8,
+              delay: 0,
+              ease: [0.44, 0, 0, 1],
+            },
+          }}
+          viewport={{
+            amount: "some",
+            once: true,
+          }}
+          className="text-24 lg:text-48 lg:leading-[150%] text-center font-bold text-violet-500 max-w-[1132px] mx-auto mb-24px"
+        >
           Become part of a thriving community of women who are redefining the
           tech industry.
-        </h1>
+        </motion.h1>
 
-        <p className="text-18 lg:text-28 font-georgia text-center max-w-928px mx-auto">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.8,
+              delay: 0.05,
+              ease: [0.44, 0, 0, 1],
+            },
+          }}
+          viewport={{
+            amount: "some",
+            once: true,
+          }}
+          className="text-18 lg:text-28 font-georgia text-center max-w-928px mx-auto"
+        >
           At HerSynergy Tribe, our membership is more than just access, it’s
           about connection, growth, and empowerment.
-        </p>
+        </motion.p>
       </section>
 
       <section className="bg-violet-50 p-24px lg:p-80px flex flex-col gap-24px justify-center items-center">

@@ -130,14 +130,14 @@ export default function Home() {
       <section className="bg-[url(/png/hero-section.png)] bg-[auto_110%] lg:bg-cover bg-center w-full h-[95vh] px-24px">
         <div className="h-full w-full flex flex-col gap-32px lg:gap-64px items-center justify-center">
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 5 }}
             whileInView={{
               opacity: 1,
               y: 0,
               transition: {
                 duration: 0.3,
                 delay: 0,
-                ease: [0.12, 0, 0, 1],
+                ease: [0.44, 0, 0, 1],
               },
             }}
             viewport={{
@@ -150,13 +150,13 @@ export default function Home() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: -5 }}
             whileInView={{
               opacity: 1,
               y: 0,
               transition: {
                 duration: 0.3,
-                delay: 0,
+                delay: 0.05,
                 ease: [0.12, 0, 0, 1],
               },
             }}
@@ -171,13 +171,13 @@ export default function Home() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: -5 }}
             whileInView={{
               opacity: 1,
               y: 0,
               transition: {
                 duration: 0.3,
-                delay: 0,
+                delay: 0.1,
                 ease: [0.12, 0, 0, 1],
               },
             }}
@@ -239,15 +239,31 @@ export default function Home() {
           </h1>
           <div className="flex flex-wrap items-center justify-center gap-24px lg:gap-44px">
             <div className="flex flex-col gap-24px order-2 nav:order-1">
-              {story.map((s) => (
-                <div key={s.title}>
+              {story.map((s, i) => (
+                <motion.div
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                    transition: {
+                      duration: 0.8,
+                      delay: i * 0.05,
+                      ease: [0.44, 0, 0, 1],
+                    },
+                  }}
+                  viewport={{
+                    amount: "some",
+                    once: true,
+                  }}
+                  key={s.title}
+                >
                   <h2 className="text-18 lg:text-32 text-violet-500 font-bold">
                     {s.title}
                   </h2>
                   <p className="text-14 lg:text-18 text-violet-500 font-georgia max-w-460px">
                     {s.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
 
               <Link
@@ -259,13 +275,13 @@ export default function Home() {
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, x: 40 }}
               whileInView={{
                 opacity: 1,
-                y: 0,
+                x: 0,
                 transition: {
                   duration: 0.8,
-                  delay: 0,
+                  delay: 0.4,
                   ease: [0.44, 0, 0, 1],
                 },
               }}
@@ -290,14 +306,14 @@ export default function Home() {
           <div className="flex gap-24px items-center justify-center flex-wrap">
             {promotingCards.map((card, i) => (
               <motion.div
-                initial={{ opacity: 0, y: 12 * (i + 1) }}
+                initial={{ opacity: 0, y: 5 }}
                 whileInView={{
                   opacity: 1,
                   y: 0,
                   transition: {
-                    duration: 0.8,
-                    delay: 0,
-                    ease: [0, 0, 0, 1],
+                    duration: 1.2,
+                    delay: i * 0.1,
+                    ease: [0.44, 0, 0, 1],
                   },
                 }}
                 viewport={{
@@ -326,8 +342,22 @@ export default function Home() {
         </h1>
 
         <div className="flex gap-24px items-center justify-center flex-wrap">
-          {fuelingGrowthCards.map((card) => (
-            <div
+          {fuelingGrowthCards.map((card, i) => (
+            <motion.div
+              initial={{ opacity: 0, y: -5 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1.2,
+                  delay: i * 0.1,
+                  ease: [0.44, 0, 0, 1],
+                },
+              }}
+              viewport={{
+                amount: "some",
+                once: true,
+              }}
               key={card.title}
               className="lg:max-w-360px w-full flex flex-col gap-16px"
             >
@@ -359,7 +389,7 @@ export default function Home() {
                   </a>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -458,8 +488,22 @@ export default function Home() {
           What Members Have To Say
         </h1>
         <div className="flex items-center justify-center flex-wrap gap-24px">
-          {testimonials.map((testimonial) => (
-            <div
+          {testimonials.map((testimonial, i) => (
+            <motion.div
+              initial={{ opacity: 0, y: -5 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1.2,
+                  delay: i * 0.1,
+                  ease: [0.44, 0, 0, 1],
+                },
+              }}
+              viewport={{
+                amount: "some",
+                once: true,
+              }}
               key={testimonial.name}
               className="rounded-xl bg-violet-50 p-24px flex flex-col gap-24px max-w-360px max-[770px]:max-w-320px w-full lg:min-h-452px"
             >
@@ -480,7 +524,7 @@ export default function Home() {
               <p className="italic text-16 font-georgia">
                 {testimonial.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -489,7 +533,23 @@ export default function Home() {
         id="newsletter"
         className="px-24px py-48px lg:p-80px bg-[url(/png/newsletterSection.png)] bg-cover"
       >
-        <div className="bg-violet-50 rounded-lg p-24px lg:p-48px flex flex-col items-center justify-center gap-24px mx-auto max-w-794px w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.8,
+              delay: 0,
+              ease: [0.44, 0, 0, 1],
+            },
+          }}
+          viewport={{
+            amount: "some",
+            once: true,
+          }}
+          className="bg-violet-50 rounded-lg p-24px lg:p-48px flex flex-col items-center justify-center gap-24px mx-auto max-w-794px w-full"
+        >
           <h1 className="text-24 lg:text-36 text-violet-500 font-bold text-center">
             Stay Connected With Our Newsletter
           </h1>
@@ -506,7 +566,7 @@ export default function Home() {
             scrolling="no"
             className="m-0 rounded-0 bg-transparent max-w-500px w-full"
           ></iframe>
-        </div>
+        </motion.div>
       </section>
     </>
   );

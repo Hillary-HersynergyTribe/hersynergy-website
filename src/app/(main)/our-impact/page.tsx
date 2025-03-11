@@ -85,13 +85,13 @@ const OurImpact = () => {
 
       <div className="px-24px py-48px lg:py-140px flex flex-col items-center gap-32px bg-violet-50">
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{
             opacity: 1,
             y: 0,
             transition: {
               duration: 0.8,
-              delay: 0.2,
+              delay: 0,
               ease: [0.44, 0, 0, 1],
             },
           }}
@@ -105,13 +105,13 @@ const OurImpact = () => {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{
             opacity: 1,
             y: 0,
             transition: {
               duration: 0.8,
-              delay: 0.2,
+              delay: 0.05,
               ease: [0.44, 0, 0, 1],
             },
           }}
@@ -129,7 +129,7 @@ const OurImpact = () => {
         <div className="flex gap-24px items-center justify-center flex-wrap w-full">
           {summaryImpacts.map((card, i) => (
             <motion.div
-              initial={{ opacity: 0, y: 5 }}
+              initial={{ opacity: 0, y: -5 }}
               whileInView={{
                 opacity: 1,
                 y: 0,
@@ -184,15 +184,15 @@ const OurImpact = () => {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-24px">
-                {impact.achievements.map((achievement) => (
+                {impact.achievements.map((achievement, i) => (
                   <motion.div
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{
                       opacity: 1,
                       y: 0,
                       transition: {
                         duration: 0.3,
-                        delay: 0,
+                        delay: i * 0.05,
                         ease: [0.12, 0, 0, 1],
                       },
                     }}

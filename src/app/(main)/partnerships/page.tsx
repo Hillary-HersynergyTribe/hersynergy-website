@@ -1,4 +1,6 @@
+"use client";
 import { PageHeader } from "../../components/PageHeader";
+import { motion } from "framer-motion";
 
 const missions = [
   { icon: "support-1", text: "Provide free tutorials and tech education" },
@@ -96,15 +98,29 @@ const PartnershipsPage = () => {
           <p className="text-18">By donating today, you help us:</p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24px">
-            {missions.map((mission) => (
-              <div
+            {missions.map((mission, i) => (
+              <motion.div
+                initial={{ opacity: 0, y: -5 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 1.2,
+                    delay: i * 0.1,
+                    ease: [0.44, 0, 0, 1],
+                  },
+                }}
+                viewport={{
+                  amount: "some",
+                  once: true,
+                }}
                 key={mission.icon}
                 className="bg-violet-200 rounded-xl px-24px py-8px flex items-center gap-24px"
               >
                 <img src={`/svg/${mission.icon}.svg`} alt={mission.text} />
 
                 <span className="text-18">{mission.text}</span>
-              </div>
+              </motion.div>
             ))}
           </div>
           <a
@@ -118,7 +134,23 @@ const PartnershipsPage = () => {
       </section>
 
       <section className="p-24px lg:p-80px">
-        <div className="mx-auto max-w-[1126px] bg-[url(/png/social-bg.png)] bg-center bg-cover rounded-xl">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.8,
+              delay: 0.05,
+              ease: [0.44, 0, 0, 1],
+            },
+          }}
+          viewport={{
+            amount: "some",
+            once: true,
+          }}
+          className="mx-auto max-w-[1126px] bg-[url(/png/social-bg.png)] bg-center bg-cover rounded-xl"
+        >
           <div className="bg-[rgba(182,154,175,0.9)] flex items-center max-sm:flex-wrap gap-24px lg:gap-56px rounded-xl py-24px lg:py-80px px-24px @max-lg:px-48px nav:px-120px">
             <div className="rounded-xl border border-violet-500 bg-violet-50 w-full flex flex-col gap-24px p-16px lg:p-24px min-w-260px nav:min-w-356px ">
               {impressions.map((impression) => (
@@ -154,7 +186,7 @@ const PartnershipsPage = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {partnershipOpportunities.map((oppurtunity) => (
@@ -170,8 +202,22 @@ const PartnershipsPage = () => {
             </div>
 
             <div className="flex  max-sm:flex-wrap gap-24px">
-              {oppurtunity.opportunities.map((o) => (
-                <div
+              {oppurtunity.opportunities.map((o, i) => (
+                <motion.div
+                  initial={{ opacity: 0, y: 5 }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 0.8,
+                      delay: i * 0.05,
+                      ease: [0.44, 0, 0, 1],
+                    },
+                  }}
+                  viewport={{
+                    amount: "some",
+                    once: true,
+                  }}
                   key={o.img}
                   className={`rounded-xl flex flex-col gap-24px p-24px w-full ${o.class}`}
                 >
@@ -185,7 +231,7 @@ const PartnershipsPage = () => {
                     {o.title}
                   </h2>
                   <p className="text-14 lg:text-18">{o.description}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
