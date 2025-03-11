@@ -50,7 +50,11 @@ export const Footer = () => {
         <div className="lg:max-w-192px w-full">
           <div className="flex flex-col gap-12px mb-24px lg:mb-40px">
             <Link href="/">
-              <img src="/png/her-logo.png" alt="hersynergy logo" className="h-30px" />
+              <img
+                src="/png/her-logo.png"
+                alt="hersynergy logo"
+                className="h-30px"
+              />
             </Link>
             <p className="text-violet-500 text-12 font-georgia">
               Empowering women in tech to connect, innovate, and lead.
@@ -125,16 +129,15 @@ export const Footer = () => {
             Subscribe to our Newsletter
           </p>
 
-          <form className="flex flex-col gap-8px mb-24px lg:mb-40px">
-            <input
-              type="text"
-              placeholder="Enter email address"
-              className="bg-black-50 rounded-2xl focus:outline-0 text-violet-600 text-16 placeholder:text-black-200 px-16px py-8px"
-            />
-            <button className="bg-violet-500 rounded-2xl text-white text-14 w-fit px-16px py-8px">
-              Subscribe
-            </button>
-          </form>
+          <iframe
+            src="https://embeds.beehiiv.com/3be0a642-f011-4430-bf95-8f692a06dd7e?slim=true"
+            data-test-id="beehiiv-embed"
+            height="52"
+            frameBorder="0"
+            scrolling="no"
+            className="m-0 rounded-0 bg-transparent max-w-300px w-full mb-24px"
+          ></iframe>
+         
 
           <p className="text-violet-500 text-16 font-semibold mb-12px">
             Contact Us

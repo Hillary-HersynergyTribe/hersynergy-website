@@ -1,7 +1,17 @@
 "use client";
 import Link from "next/link";
 import { motion, AnimatePresence, animate } from "framer-motion";
-import { Testimonials } from "../components/Testimonials";
+import MapChart from "../components/MapChart";
+
+const highlights = [
+  { title: "150+", description: "Active members from all across EMEA" },
+  {
+    title: "200+",
+    description: "Jobs & internships shared through the network",
+  },
+  { title: "$5K", description: "Raised for students & young girls" },
+  { title: "30+", description: "Women mentored in multiple tech fields" },
+];
 
 const fuelingGrowthCards = [
   {
@@ -353,6 +363,30 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <section className="bg-white-500 p-24px lg:p-80px">
+        <h1 className="text-24 lg:text-36 text-violet-500 font-bold text-center">
+          Our Global Impact, One Connection at a Time
+        </h1>
+        <div className="max-w-[1280px] mx-auto">
+          <MapChart></MapChart>
+        </div>
+
+        <div className="p-24px rounded-xl bg-violet-100 flex max-md:flex-wrap items-center justify-center gap-16px max-w-788px mx-auto">
+          {highlights.map((highlight) => (
+            <div
+              key={highlight.title}
+              className="flex flex-col gap-8px items-center text-center"
+            >
+              <h2 className="font-bold text-28 lg:text-48 text-violet-500 ">
+                {highlight.title}
+              </h2>
+              <p className="text-14 font-medium max-w-180px w-full">
+                {highlight.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* membership spotlight */}
       <div className="bg-violet-50 px-24px py-48px lg:p-80px flex items-center justify-center flex-wrap gap-24px lg:gap-72px">
@@ -431,24 +465,14 @@ export default function Home() {
             Job alerts, career moves, and success stories—all in your inbox, no
             fluff.
           </p>
-
-          <form className="flex flex-col max-w-606px w-full">
-            <label
-              htmlFor="email"
-              className="text-16 text-violet-500 mb-8px font-georgia"
-            >
-              Email Address
-            </label>
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter email address"
-              className="bg-black-50 border border-violet-100 rounded-lg focus:outline-0 text-violet-600 text-16 placeholder:text-black-200 font-georgia px-16px py-8px h-54px"
-            />
-            <button className="bg-violet-500 rounded-2xl text-white text-14 w-fit px-16px py-8px mt-24px">
-              Subscribe
-            </button>
-          </form>
+          <iframe
+            src="https://embeds.beehiiv.com/3be0a642-f011-4430-bf95-8f692a06dd7e?slim=true"
+            data-test-id="beehiiv-embed"
+            height="52"
+            frameBorder="0"
+            scrolling="no"
+            className="m-0 rounded-0 bg-transparent max-w-500px w-full"
+          ></iframe>
         </div>
       </section>
     </>
