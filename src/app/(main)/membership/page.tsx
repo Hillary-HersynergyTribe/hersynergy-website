@@ -1,4 +1,6 @@
+"use client";
 import { PageHeader } from "../../components/PageHeader";
+import { motion } from "framer-motion";
 
 const howToJoin = [
   {
@@ -60,8 +62,22 @@ const MembershipPage = () => {
 
       <section className="bg-violet-50 p-24px lg:p-80px flex flex-col gap-24px justify-center items-center">
         <div className="flex flex-wrap justify-center gap-24px lg:gap-32px">
-          {benefits.map((benefit) => (
-            <div
+          {benefits.map((benefit, i) => (
+            <motion.div
+              initial={{ opacity: 0, y: 5 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1.2,
+                  delay: i * 0.1,
+                  ease: [0.44, 0, 0, 1],
+                },
+              }}
+              viewport={{
+                amount: "some",
+                once: true,
+              }}
               key={benefit.img}
               className={`rounded-xl max-w-382px max-[770px]:max-w-320px w-full odd:bg-[url(/png/card-bg-2.png)] even:bg-[url(/png/card-bg-1.png)] bg-bottom bg-cover rounded-b-2xl transition-all duration-500 ease-in-out hover:cursor-pointer hover:shadow-popUp`}
             >
@@ -74,7 +90,7 @@ const MembershipPage = () => {
                   {benefit.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -98,8 +114,22 @@ const MembershipPage = () => {
           </p>
 
           <div className="flex gap-24px max-md:flex-wrap">
-            {howToJoin.map((item) => (
-              <div
+            {howToJoin.map((item, i) => (
+              <motion.div
+                initial={{ opacity: 0, y: 5 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 1.2,
+                    delay: i * 0.1,
+                    ease: [0.44, 0, 0, 1],
+                  },
+                }}
+                viewport={{
+                  amount: "some",
+                  once: true,
+                }}
                 key={item.img}
                 className="p-24px flex flex-col gap-16px bg-blue-100 rounded-xl transition-all duration-500 ease-in-out hover:cursor-pointer hover:shadow-popUp"
               >
@@ -113,7 +143,7 @@ const MembershipPage = () => {
                 </h3>
 
                 <p className="text-16 font-georgia">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

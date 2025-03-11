@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { PageHeader } from "../../components/PageHeader";
-import { motion, AnimatePresence, animate } from "framer-motion";
+import { motion } from "framer-motion";
 
 const summaryImpacts = [
   {
@@ -84,27 +84,59 @@ const OurImpact = () => {
       <PageHeader title="our impact" bgImage="our-impact"></PageHeader>
 
       <div className="px-24px py-48px lg:py-140px flex flex-col items-center gap-32px bg-violet-50">
-        <h1 className="text-24 lg:text-36 text-violet-700 font-bold text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.44, 0, 0, 1],
+            },
+          }}
+          viewport={{
+            amount: "some",
+            once: true,
+          }}
+          className="text-24 lg:text-36 text-violet-700 font-bold text-center"
+        >
           Our Impact
-        </h1>
+        </motion.h1>
 
-        <p className="text-20 text-center font-georgia max-w-1000px">
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.44, 0, 0, 1],
+            },
+          }}
+          viewport={{
+            amount: "some",
+            once: true,
+          }}
+          className="text-20 text-center font-georgia max-w-1000px"
+        >
           We are committed to championing the success of women in diverse
           industries by providing essential support and creating inclusive
           opportunities both within and beyond our community.
-        </p>
+        </motion.p>
 
         <div className="flex gap-24px items-center justify-center flex-wrap w-full">
           {summaryImpacts.map((card, i) => (
             <motion.div
-              initial={{ opacity: 0, y: 20 * (i + 1) }}
+              initial={{ opacity: 0, y: 5 }}
               whileInView={{
                 opacity: 1,
                 y: 0,
                 transition: {
-                  duration: 0.3,
-                  delay: 0,
-                  ease: [0.12, 0, 0, 1],
+                  duration: 1.2,
+                  delay: i * 0.1,
+                  ease: [0.44, 0, 0, 1],
                 },
               }}
               viewport={{

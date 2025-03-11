@@ -1,4 +1,6 @@
+"use client";
 import { PageHeader } from "../../components/PageHeader";
+import { motion } from "framer-motion";
 
 const founders = [
   {
@@ -35,18 +37,17 @@ const conversations = [
   
   Also big thanks to <span className="!text-green-700">@Hillary</span> and <span className="!text-green-700">@Tolu Ajibola</span> for creating this group. You’re adding so so much valueeeee...”`,
   `“I had such an amazing time! Thank you so much all for the vulnerability with sharing your stories from Tochi’s story to learning “scaring efficient” to our crypto argument. It was really the best way to end the year for me. Looking forward to our wins in 2025 and more physical meet ups.”`,
-  
+
   `“I never ever regret joining any session. So much and quality. So much value and quality. Thank you! <span className="!text-green-700">@Hillary Omitogun</span>`,
-  
-  
+
   `“Thank you <span className="!text-green-700">@Hillary Omitogun</span> and <span className="!text-green-700">@Tolu A.</span>  for organising and driving this! The kids were really excited to receive the items. I’m honestly, really excited about the impact we can make with this community!`,
 
   `Hiii! The email🥹🥹🥹 -- I love it so much! It's the perfect start to my morning. I'm looking forward to all we achieve as a community in 2025 ✨🎉🎉❤️❤️`,
-  
+
   `@Hillary just wanted to let you know that the group is such a great idea. i’m so inspired by you and your attention to detail! 
 
   It’s so great seeing all you’re doing, and looking fabulous while doing it!`,
-  
+
   `It was refreshing hearing everyone talk about their gratitude list & catch word for 2025. I was excited to meet everyone especially my new connections @ ~Temi F. @ ~ Toun
   Adereni
   + everyone looked so good, omggg
@@ -91,7 +92,23 @@ const AboutUs = () => {
     <>
       <PageHeader title="about us" bgImage="about-us"></PageHeader>
 
-      <section className="px-24px py-48px lg:p-80px">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.8,
+            delay: 0,
+            ease: [0.44, 0, 0, 1],
+          },
+        }}
+        viewport={{
+          amount: "some",
+          once: true,
+        }}
+        className="px-24px py-48px lg:p-80px"
+      >
         <h1 className="text-violet-500 text-24 lg:text-36 font-bold text-center mb-24px">
           HerSynergy Tribe: Bridging Gaps, Building Connections
         </h1>
@@ -107,11 +124,27 @@ const AboutUs = () => {
           mentorship, resources, and genuine connections to propel their careers
           forward.
         </p>
-      </section>
+      </motion.section>
 
       <section className="bg-[url(/png/hersynergy-tribe-bg.png)] bg-cover bg-center px-24px py-48px lg:p-80px">
         <div className="flex items-center justify-between max-md:flex-wrap gap-24px max-w-942px mx-auto">
-          <div className="max-w-480px flex flex-col gap-24px order-2 lg:order-1">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.44, 0, 0, 1],
+              },
+            }}
+            viewport={{
+              amount: "some",
+              once: true,
+            }}
+            className="max-w-480px flex flex-col gap-24px order-2 lg:order-1"
+          >
             <h2 className="text-24 lg:text-32 font-bold text-violet-500">
               Why We Exist
             </h2>
@@ -131,12 +164,26 @@ const AboutUs = () => {
                 <p className="text-14 lg:text-18 font-georgia">{why}</p>
               </div>
             ))}
-          </div>
-          <img
-            src="/png/hersynergy-tribe.png"
-            alt="hersynergy tribe"
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                duration: 0.8,
+                delay: 0.4,
+                ease: [0.44, 0, 0, 1],
+              },
+            }}
+            viewport={{
+              amount: "some",
+              once: true,
+            }}
             className="order-1 lg:order-2"
-          />
+          >
+            <img src="/png/hersynergy-tribe.png" alt="hersynergy tribe" />
+          </motion.div>
         </div>
       </section>
 
@@ -146,8 +193,25 @@ const AboutUs = () => {
         </h1>
 
         <div className="flex max-sm:flex-wrap items-start gap-24px max-w-[1126px] mx-auto">
-          {founders.map((founder) => (
-            <div key={founder.img} className="max-w-552px w-full">
+          {founders.map((founder, i) => (
+            <motion.div
+              initial={{ opacity: 0, y: 5 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1.2,
+                  delay: i * 0.1,
+                  ease: [0.44, 0, 0, 1],
+                },
+              }}
+              viewport={{
+                amount: "some",
+                once: true,
+              }}
+              key={founder.img}
+              className="max-w-552px w-full"
+            >
               <img
                 src={`/png/${founder.img}.png`}
                 alt={founder.img}
@@ -178,7 +242,7 @@ const AboutUs = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -214,14 +278,46 @@ const AboutUs = () => {
 
       <section className="px-24px py-48px lg:p-80px">
         <div className="max-w-[1128px] mx-auto flex items-center max-md:flex-wrap justify-between gap-24px lg:gap-48px">
-          <div className="w-full max-nav:max-w-400px">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.44, 0, 0, 1],
+              },
+            }}
+            viewport={{
+              amount: "some",
+              once: true,
+            }}
+            className="w-full max-nav:max-w-400px"
+          >
             <img
               src="/png/creating-a-sustainable-movement.png"
               alt="creating-a-sustainable-movement"
               className="w-full"
             />
-          </div>
-          <div className="flex flex-col gap-24px max-w-480px w-full">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                duration: 0.8,
+                delay: 0.4,
+                ease: [0.44, 0, 0, 1],
+              },
+            }}
+            viewport={{
+              amount: "some",
+              once: true,
+            }}
+            className="flex flex-col gap-24px max-w-480px w-full"
+          >
             <h2 className="text-24 lg:text-36 font-bold text-violet-500">
               Creating A Sustainable Movement
             </h2>
@@ -236,7 +332,7 @@ const AboutUs = () => {
             >
               Start your journey
             </a>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -247,7 +343,21 @@ const AboutUs = () => {
 
         <div className="gap-12px columns-1 nav:columns-4 max-nav:columns-3 max-md:columns-2 max-sm:columns-1">
           {conversations.map((conversation, i) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 5 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1.2,
+                  delay: i * 0.1,
+                  ease: [0.44, 0, 0, 1],
+                },
+              }}
+              viewport={{
+                amount: "some",
+                once: true,
+              }}
               key={i}
               className="bg-[url(/png/whatsapp-bg.png)] bg-center bg-cover rounded-xl h-fit flex flex-col gap-24px p-24px break-inside-avoid mb-12px"
             >
@@ -260,7 +370,7 @@ const AboutUs = () => {
                 className="text-white text-14 max-sm:text-16 font-georgia"
                 dangerouslySetInnerHTML={{ __html: conversation }}
               ></div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { motion, AnimatePresence, animate } from "framer-motion";
+import { motion } from "framer-motion";
 import MapChart from "../components/MapChart";
 
 const highlights = [
@@ -367,11 +367,11 @@ export default function Home() {
         <h1 className="text-24 lg:text-36 text-violet-500 font-bold text-center">
           Our Global Impact, One Connection at a Time
         </h1>
-        <div className="max-w-[1280px] mx-auto">
+        <div className="max-w-[1180px] mx-auto lg:pr-120px -mt-48px">
           <MapChart></MapChart>
         </div>
 
-        <div className="p-24px rounded-xl bg-violet-100 flex max-md:flex-wrap items-center justify-center gap-16px max-w-788px mx-auto">
+        <div className="p-24px rounded-xl bg-violet-100 flex max-md:flex-wrap items-center justify-center gap-16px max-w-788px mx-auto -mt-120px">
           {highlights.map((highlight) => (
             <div
               key={highlight.title}
@@ -390,8 +390,41 @@ export default function Home() {
 
       {/* membership spotlight */}
       <div className="bg-violet-50 px-24px py-48px lg:p-80px flex items-center justify-center flex-wrap gap-24px lg:gap-72px">
-        <img src="/png/Membership Image.png" alt="member spotlight" />
-        <div className="flex flex-col gap-24px max-w-460px w-full">
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.44, 0, 0, 1],
+            },
+          }}
+          viewport={{
+            amount: "some",
+            once: true,
+          }}
+        >
+          <img src="/png/Membership Image.png" alt="member spotlight" />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 0.8,
+              delay: 0.4,
+              ease: [0.44, 0, 0, 1],
+            },
+          }}
+          viewport={{
+            amount: "some",
+            once: true,
+          }}
+          className="flex flex-col gap-24px max-w-460px w-full"
+        >
           <h1 className="text-24 lg:text-36 font-bold text-violet-500">
             Join the Hersynergy Tribe
           </h1>
@@ -416,7 +449,7 @@ export default function Home() {
           >
             Become a member
           </a>
-        </div>
+        </motion.div>
       </div>
       {/* membership spotlight */}
 

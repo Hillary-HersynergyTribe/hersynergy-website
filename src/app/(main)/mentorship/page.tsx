@@ -1,7 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { PageHeader } from "../../components/PageHeader";
 import { Testimonials } from "@/app/components/Testimonials";
+import { motion } from "framer-motion";
 
 const mentees = [
   { img: "Tosin Adewunmi", name: "Tosin Adewunmi", role: "Product Management" },
@@ -102,7 +103,7 @@ const mentors = [
   { img: "Tolu Ajibola", name: "Tolu Ajibola", role: "Operations Lead" },
   {
     img: "Jeniffer Echenim",
-    name: "Jeniffer Echenim",
+    name: "Jennifer Echenim",
     role: "Software Engineer",
   },
   {
@@ -214,7 +215,23 @@ const MentorshipPage = () => {
     <>
       <PageHeader title="mentorship" bgImage="mentorship"></PageHeader>
 
-      <section className="px-24px py-48px lg:p-80px bg-violet-50">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.8,
+            delay: 0,
+            ease: [0.44, 0, 0, 1],
+          },
+        }}
+        viewport={{
+          amount: "some",
+          once: true,
+        }}
+        className="px-24px py-48px lg:p-80px bg-violet-50"
+      >
         <div className="mx-auto max-w-[1112px] bg-[url(/png/mentorship-bg.png)] bg-center bg-cover py-48px lg:py-120px rounded-xl flex flex-col items-center gap-24px">
           <h1 className="text-24 lg:text-32 text-center text-white max-w-712px">
             Position the Next Generation of Tech Leaders for Success
@@ -230,17 +247,47 @@ const MentorshipPage = () => {
             Become a mentor
           </a>
         </div>
-      </section>
+      </motion.section>
 
       <section className="bg-[url(/png/impact-bg.png)] bg-cover px-24px py-48px lg:p-80px">
         <div className="max-w-[1122px] mx-auto flex flex-col items-center gap-24px">
-          <h2 className="text-24 lg:text-32 font-bold text-violet-500 capitalize">
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.44, 0, 0, 1],
+              },
+            }}
+            viewport={{
+              amount: "some",
+              once: true,
+            }}
+            className="text-24 lg:text-32 font-bold text-violet-500 capitalize"
+          >
             Meet our mentees
-          </h2>
+          </motion.h2>
 
           <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24px">
-            {displayedMentees.map((mentee) => (
-              <div
+            {displayedMentees.map((mentee, i) => (
+              <motion.div
+                initial={{ opacity: 0, y: 5 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 1.2,
+                    delay: i * 0.1,
+                    ease: [0.44, 0, 0, 1],
+                  },
+                }}
+                viewport={{
+                  amount: "some",
+                  once: true,
+                }}
                 key={mentee.img}
                 className="rounded-xl border border-violet-500 relative"
               >
@@ -250,7 +297,7 @@ const MentorshipPage = () => {
                   className="rounded-[10px]"
                 />
 
-                <div className="absolute bottom-20px left-1/2 -translate-x-1/2 rounded-xl py-4px px-24px bg-violet-500 border border-violet-50 text-violet-50 text-center">
+                <div className="absolute bottom-20px left-1/2 -translate-x-1/2 rounded-xl py-4px px-24px w-[calc(100%-40px)] bg-violet-500 border border-violet-50 text-violet-50 text-center">
                   <p className="text-14 lg:text-16 font-semibold whitespace-nowrap">
                     {mentee.name}
                   </p>
@@ -258,7 +305,7 @@ const MentorshipPage = () => {
                     {mentee.role}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -289,13 +336,43 @@ const MentorshipPage = () => {
 
       <section className="bg-[url(/png/impact-bg.png)] bg-cover px-24px py-48px lg:p-80px">
         <div className="max-w-[1122px] mx-auto flex flex-col items-center gap-24px">
-          <h2 className="text-24 lg:text-32 font-bold text-violet-500">
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.44, 0, 0, 1],
+              },
+            }}
+            viewport={{
+              amount: "some",
+              once: true,
+            }}
+            className="text-24 lg:text-32 font-bold text-violet-500"
+          >
             Get To Know Our Mentors
-          </h2>
+          </motion.h2>
 
           <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24px">
-            {displayedMentors.map((mentor) => (
-              <div
+            {displayedMentors.map((mentor, i) => (
+              <motion.div
+                initial={{ opacity: 0, y: 5 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 1.2,
+                    delay: i * 0.1,
+                    ease: [0.44, 0, 0, 1],
+                  },
+                }}
+                viewport={{
+                  amount: "some",
+                  once: true,
+                }}
                 key={mentor.img}
                 className="rounded-xl border border-violet-500 relative"
               >
@@ -305,7 +382,7 @@ const MentorshipPage = () => {
                   className="rounded-[10px]"
                 />
 
-                <div className="absolute bottom-20px left-1/2 -translate-x-1/2 rounded-xl py-4px px-24px bg-violet-500 border border-violet-50 text-violet-50 text-center">
+                <div className="absolute bottom-20px left-1/2 -translate-x-1/2 rounded-xl w-[calc(100%-40px)] py-4px px-24px bg-violet-500 border border-violet-50 text-violet-50 text-center">
                   <p className="text-14 lg:text-16 font-semibold whitespace-nowrap">
                     {mentor.name}
                   </p>
@@ -313,7 +390,7 @@ const MentorshipPage = () => {
                     {mentor.role}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
