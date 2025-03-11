@@ -5,11 +5,11 @@ import { Testimonials } from "@/app/components/Testimonials";
 import { motion } from "framer-motion";
 
 const mentees = [
-  { img: "Tosin Adewunmi", name: "Melody Anaele", role: "Product Management" },
+  { img: "Tosin Adewunmi", name: "Melody Anaele", role: "CX Product Research" },
   {
     img: "Melody Anaele",
     name: "Tosin Adewunmi ",
-    role: "CX Product Research",
+    role: "Product Management",
   },
   { img: "Sarah Paul", name: "Sarah Paul", role: "Product Marketing" },
   {
