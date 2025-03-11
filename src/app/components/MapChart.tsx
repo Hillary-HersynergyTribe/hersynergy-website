@@ -53,7 +53,7 @@ const MapChart = () => {
             className=" scale-75"
             fill="none"
             stroke="#612351"
-            strokeWidth="1"
+            strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
             transform="translate(-12, -24)"

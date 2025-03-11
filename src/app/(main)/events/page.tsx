@@ -47,13 +47,13 @@ const philanthropicEvents = [
     date: "",
     location: "Lagos",
   },
-  {
-    img: "philanthropy-outreach-4",
-    name: "",
-    type: "Philanthropic Outreach",
-    date: "",
-    location: "Lagos",
-  },
+  // {
+  //   img: "philanthropy-outreach-4",
+  //   name: "",
+  //   type: "Philanthropic Outreach",
+  //   date: "",
+  //   location: "Lagos",
+  // },
 ];
 
 const pastEvents = [
