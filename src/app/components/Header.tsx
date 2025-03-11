@@ -49,18 +49,13 @@ export const Header = () => {
   const [currentRoute, setCurrentRoute] = useState("Home");
   const pathname = usePathname();
 
-  console.log(pathname);
-  const isRouteActive = () => {
-    const cRoutes = menuItems.map((menu) => menu.children);
-
-    console.log(cRoutes);
-
-  //  const act = 
-
-    return false;
+  const isChildrenRouteActive = (parentRoute: string) => {
+    const childrenRoutes = menuItems.find(
+      (item) => item.name === parentRoute
+    )?.children;
+    return childrenRoutes?.some((route) => route.route === pathname);
   };
-
-  const isMenuActive = isRouteActive();
+  
   return (
     <header>
       <nav className="w-full py-16px px-24px z-50 fixed bg-white-100 shadow">
@@ -149,7 +144,10 @@ export const Header = () => {
               >
                 <div
                   className={`flex items-center gap-8px relative transition-all duration-75 ${
-                    currentRoute === link.name
+                    (currentRoute === link.name ||
+                      isChildrenRouteActive(link.name) ||
+                      link.route === pathname) &&
+                    link.route !== "/"
                       ? "lg:after:absolute lg:after:left-0 lg:after:inset-6 lg:after:block lg:after:h-2px lg:after:w-full lg:after:bg-violet-500"
                       : ""
                   }`}

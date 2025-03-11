@@ -159,18 +159,18 @@ const OurImpact = () => {
 
         <Link
           href="/partnerships"
-          className="bg-violet-500 rounded-4xl text-white text-16 w-fit px-24px py-16px mt-24px"
+          className="bg-violet-500 rounded-4xl text-white text-14 lg:text-16 w-fit px-12px py-8px lg:px-24px lg:py-16px mt-24px"
         >
           Lets work together
         </Link>
       </div>
 
       <div className="bg-[url(/png/impact-bg.png)] bg-cover px-24px py-48px lg:py-80px lg:px-140px">
-        <h1 className="text-24 lg:text-36 text-violet-700 font-bold text-center">
+        <h1 className="text-24 lg:text-36 text-violet-700 font-bold text-center mb-24px">
           The HerSynergy Way: Our Impact
         </h1>
 
-        <p className="text-20 text-center font-georgia mb-24px lg:mb-48px">
+        <p className="text-16 lg:text-20 text-center font-georgia mb-24px lg:mb-48px">
           Here’s how we’ve created impact across our core pillars.
         </p>
 
@@ -178,7 +178,7 @@ const OurImpact = () => {
           {impacts.map((impact) => (
             <div key={impact.impact} className="flex flex-col gap-24px">
               <div className="border border-violet-500 bg-violet-50 rounded-xl p-8px">
-                <h2 className=" text-18 lg:text-24 font-bold text-violet-500 capitalize">
+                <h2 className="text-16 lg:text-24 font-semibold lg:font-bold text-violet-500 capitalize">
                   {impact.impact}
                 </h2>
               </div>
@@ -210,7 +210,7 @@ const OurImpact = () => {
                     <h4 className="text-24 font-bold capitalize">
                       {achievement.title}
                     </h4>
-                    <p className="text-18 font-light font-georgia">
+                    <p className="text-14 lg:text-18 font-light font-georgia">
                       {achievement.description}
                     </p>
                   </motion.div>

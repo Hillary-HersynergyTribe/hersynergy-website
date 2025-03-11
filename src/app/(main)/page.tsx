@@ -75,7 +75,7 @@ const story = [
   {
     title: "Our Mission:",
     description:
-      "To equip ambitious women with the tools, support, and community they need to advance confidentially in their careers.",
+      "To equip ambitious women with the tools, support, and community they need to advance confidently in their careers.",
   },
   {
     title: "Our Vision:",
@@ -126,7 +126,7 @@ const testimonials = [
   {
     img: "Nmesoma Okonkwo",
     name: "Nmesoma Okonkwo",
-    role: "Senior Product Designer, Fundall",
+    role: "Product Designer, Fundall",
     title: "“A Tribe That Truly Supports Your Growth”",
     description:
       "“HerSynergy is a safe space where women genuinely pour into each other. No matter what you’re going through, you’ll find women who are ready to listen, support, guide, and uplift you.”",
@@ -217,10 +217,14 @@ export default function Home() {
           Our Members Represent Global Brands
         </h1>
 
-        <div className="flex items-center justify-center gap-8px flex-wrap">
+        <div className="flex items-center justify-center gap-12px lg:gap-24px flex-wrap">
           {brands.map((brand) => (
             <a key={brand.name} href={brand.link} target="_blank">
-              <img src={`/svg/${brand.name}.svg`} alt={brand.name} />
+              <img
+                src={`/svg/${brand.name}.svg`}
+                alt={brand.name}
+                className="max-h-40px"
+              />
             </a>
           ))}
         </div>
@@ -312,7 +316,7 @@ export default function Home() {
             Promoting the Next Level of Women in Tech
           </h1>
 
-          <div className="flex gap-24px items-center justify-center flex-wrap">
+          <div className="flex gap-24px items-center justify-center max-md:flex-wrap">
             {promotingCards.map((card, i) => (
               <motion.div
                 initial={{ opacity: 0, y: 5 }}
@@ -350,7 +354,7 @@ export default function Home() {
           Fueling Growth Through Collective Impact
         </h1>
 
-        <div className="flex gap-24px items-center justify-center flex-wrap">
+        <div className="flex gap-24px items-center justify-center max-md:flex-wrap">
           {fuelingGrowthCards.map((card, i) => (
             <motion.div
               initial={{ opacity: 0, y: -5 }}
@@ -373,7 +377,7 @@ export default function Home() {
               <img src={`/png/${card.title}.png`} alt={card.title} />
               <div className="p-16px rounded-lg bg-white flex flex-col gap-16px items-center justify-center">
                 <h2
-                  className={`text-24 uppercase font-semibold ${card.titleColor}`}
+                  className={`text-18 lg:text-24 uppercase font-semibold ${card.titleColor}`}
                 >
                   {card.title}
                 </h2>
@@ -384,7 +388,7 @@ export default function Home() {
                 {card.type === "internal" ? (
                   <Link
                     href={card.link}
-                    className={`px-24px py-16px rounded-2xl text-white ${card.buttonColor}`}
+                    className={`px-12px py-8px lg:px-24px lg:py-16px rounded-2xl text-white ${card.buttonColor}`}
                   >
                     {card.button}
                   </Link>
@@ -392,7 +396,7 @@ export default function Home() {
                   <a
                     href={card.link}
                     target="_blank"
-                    className={`px-24px py-16px rounded-2xl text-white ${card.buttonColor}`}
+                    className={`px-12px py-8px lg:px-24px lg:py-16px rounded-2xl text-white ${card.buttonColor}`}
                   >
                     {card.button}
                   </a>
@@ -410,16 +414,16 @@ export default function Home() {
           <MapChart></MapChart>
         </div>
 
-        <div className="p-12px lg:p-24px rounded-xl bg-violet-100 grid grid-cols-1 max-md:grid-cols-2  max-lg:grid-cols-4  items-center justify-center gap-16px max-w-788px mx-auto lg:-mt-120px">
+        <div className="p-12px lg:p-24px rounded-xl bg-violet-100 grid max-[425px]:grid-cols-2  md:grid-cols-4  items-center justify-center gap-16px max-w-788px mx-auto lg:-mt-120px">
           {highlights.map((highlight) => (
             <div
               key={highlight.title}
               className="flex flex-col gap-8px items-center text-center"
             >
-              <h2 className="font-bold text-28 lg:text-48 text-violet-500 ">
+              <h2 className="font-bold text-24 lg:text-48 text-violet-500 ">
                 {highlight.title}
               </h2>
-              <p className="text-14 font-medium max-w-180px w-full">
+              <p className="text-12 md:text-14 font-medium max-w-180px w-full">
                 {highlight.description}
               </p>
             </div>
@@ -489,7 +493,7 @@ export default function Home() {
           <a
             href="https://forms.gle/XK5KF2oCxsSUc2oE6"
             target="_blank"
-            className="bg-violet-500 rounded-4xl text-white text-16 w-fit px-24px py-16px mt-24px"
+            className="bg-violet-500 rounded-4xl text-white text-14 lg:text-16 w-fit px-12px py-8px lg:px-24px lg:py-16px mt-24px"
           >
             Become a member
           </a>
@@ -497,7 +501,7 @@ export default function Home() {
       </div>
       {/* membership spotlight */}
 
-      <section className="p-48px lg:p-80px bg-blue-50">
+      <section className="p-24px lg:p-80px bg-blue-50">
         <h1 className="text-24 lg:text-36 text-violet-500 font-bold text-center mb-48px">
           What Members Have To Say
         </h1>
@@ -522,10 +526,12 @@ export default function Home() {
               className="rounded-xl bg-violet-50 p-24px flex flex-col gap-24px max-w-360px max-[770px]:max-w-320px w-full lg:min-h-452px"
             >
               <div className="flex items-center gap-24px">
-                <img
-                  src={`/png/${testimonial.img}.png`}
-                  alt={testimonial.img}
-                />
+                <div className="max-w-[425px]:h-48px">
+                  <img
+                    src={`/png/${testimonial.img}.png`}
+                    alt={testimonial.img}
+                  />
+                </div>
                 <div>
                   <h4 className="text-16 font-semibold">{testimonial.name}</h4>
                   <p className="text-violet-500 italic text-14">
