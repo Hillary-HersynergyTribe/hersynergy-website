@@ -17,7 +17,7 @@ const summitActions = [
     description:
       "Join us to learn, network, and grow along side industry leaders and professionals. Seize the opportunity to pitch your ideas for a grant and take your career to new heights.",
     buttonText: "Register Now",
-    link: "https://tix.africa/hersynergysummit",
+    link: "https://tix.africa/hersynergy",
   },
   {
     img: "volunteer 2",
@@ -160,7 +160,7 @@ const SummitPage = () => {
             connections to unlock your next chapter.
           </p>
           <a
-            href="https://tix.africa/hersynergysummit"
+            href="https://tix.africa/hersynergy"
             target="_blank"
             className="bg-violet-500 rounded-4xl text-white font-bold text-16 w-fit px-24px py-16px mt-24px flex items-center gap-8px"
           >
@@ -309,7 +309,7 @@ const SummitPage = () => {
           </div>
 
           <a
-            href="https://tix.africa/hersynergysummit"
+            href="https://tix.africa/hersynergy"
             target="_blank"
             className="bg-violet-500 rounded-3xl text-white text-12 lg:text-18 lg:font-bold w-fit px-24px py-8px lg:py-16px mt-auto"
           >

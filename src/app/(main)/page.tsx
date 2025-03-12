@@ -89,13 +89,13 @@ const story = [
 ];
 
 const brands = [
-  { name: "lyft", link: "https://www.lyft.com/" },
   { name: "moniepoint", link: "https://moniepoint.com/" },
+  { name: "lyft", link: "https://www.lyft.com/" },
   { name: "paystack", link: "https://paystack.com/" },
   { name: "microsoft", link: "https://www.microsoft.com/" },
-  { name: "ayden", link: "https://www.adyen.com/" },
-  { name: "norebase", link: "https://norebase.com/" },
+  { name: "adyen", link: "https://www.adyen.com/" },
   { name: "spotify", link: "https://spotify.com/" },
+  { name: "norebase", link: "https://norebase.com/" },
 ];
 
 const testimonials = [
@@ -212,21 +212,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-24px py-48px lg:p-80px bg-white">
-        <h1 className="text-32 text-violet-500 font-bold text-center mb-24px lg:mb-48px">
+      <section className="px-24px py-48px lg:p-80px bg-white overflow-x-hidden">
+        <h1 className="text-24 lg:text-32 text-violet-500 font-bold text-center mb-24px lg:mb-48px">
           Our Members Represent Global Brands
         </h1>
 
-        <div className="flex items-center justify-center gap-12px lg:gap-24px flex-wrap">
+        <div className=" items-center justify-center gap-12px lg:gap-36px flex-wrap hidden lg:flex">
           {brands.map((brand) => (
             <a key={brand.name} href={brand.link} target="_blank">
-              <img
-                src={`/svg/${brand.name}.svg`}
-                alt={brand.name}
-                className="max-h-40px"
-              />
+              <img src={`/svg/${brand.name}.svg`} alt={brand.name} />
             </a>
           ))}
+        </div>
+
+        <div className="slideshow inline-block lg:hidden">
+          <div className="firstSlide">
+            <div className="flex items-center">
+              {[0, 1].map((i) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-center gap-36px"
+                >
+                  {brands.map((brand) => (
+                    <a key={brand.name} href={brand.link} target="_blank">
+                      <img src={`/svg/${brand.name}.svg`} alt={brand.name} />
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
