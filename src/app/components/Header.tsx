@@ -182,7 +182,7 @@ export const Header = () => {
                   ) : null}
                 </div>
 
-                {currentRoute === link.name && link.children ? (
+                {currentRoute === link.name ? (
                   <div className="lg:absolute lg:top-[100%] lg:shadow lg:min-w-[228px] w-fit bg-white-100 rounded-md lg:z-10 transition-all ease-in-out duration-300 lg:h-fit max-lg:ml-20px">
                     <ul className="lg:pl-20px">
                       {link.children?.map((subRoute) => (
@@ -191,6 +191,7 @@ export const Header = () => {
                           key={subRoute.name}
                           onClick={(event) => {
                             event.stopPropagation();
+                            setCurrentRoute('');
                             setShowMenu(false);
                           }}
                         >
