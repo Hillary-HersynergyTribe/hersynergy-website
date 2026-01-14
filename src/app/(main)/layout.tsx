@@ -23,6 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          id="mcjs"
+          dangerouslySetInnerHTML={{
+            __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/71c8a5f3a4f57aad7aad246da/c83e6881d2376724f262005c9.js");`,
+          }}
+        />
+
+      </head>
       <body
         className={`${nunito.className} antialiased`}
         suppressHydrationWarning={true}
@@ -31,7 +40,7 @@ export default function RootLayout({
         <div className="pt-58px">{children}</div>
         <Footer></Footer>
       </body>
-      <Script id="mcjs" strategy="afterInteractive" src="https://chimpstatic.com/mcjs-connected/js/users/71c8a5f3a4f57aad7aad246da/c83e6881d2376724f262005c9.js"></Script>
+      {/* <Script id="mcjs" strategy="afterInteractive" src="https://chimpstatic.com/mcjs-connected/js/users/71c8a5f3a4f57aad7aad246da/c83e6881d2376724f262005c9.js"></Script> */}
 
       <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`} />
 
