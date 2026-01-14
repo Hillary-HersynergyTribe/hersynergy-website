@@ -32,10 +32,14 @@ export default function RootLayout({
         <Footer></Footer>
       </body>
 
+      <Script id="mcjs" strategy="lazyOnload">
+        {`!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7a5f6f6f4f4f4f4f4f4f4f4f4/7a5f6f6f4f4f4f4f4f4f4f4f4.js");`}
+      </Script>
+
       <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`} />
 
-			<Script strategy="lazyOnload">
-				{`
+      <Script strategy="lazyOnload">
+        {`
 					window.dataLayer = window.dataLayer || [];
 					function gtag(){dataLayer.push(arguments);}
 					gtag('js', new Date());
@@ -43,7 +47,7 @@ export default function RootLayout({
 					page_path: window.location.pathname,
 					});
 				`}
-			</Script>
+      </Script>
     </html>
   );
 }
