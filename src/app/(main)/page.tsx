@@ -564,7 +564,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section
+      {/* <section
         id="newsletter"
         className="px-24px py-48px lg:p-80px bg-[url(/png/newsletterSection.png)] bg-cover"
       >
@@ -602,7 +602,7 @@ export default function Home() {
             className="m-0 rounded-0 bg-transparent max-w-500px w-full"
           ></iframe>
         </motion.div>
-      </section>
+      </section> */}
     </>
   );
 }

@@ -125,7 +125,7 @@ export const Footer = () => {
         </div>
 
         <div className="lg:max-w-264px w-full">
-          <p className="text-violet-500 text-16 font-semibold mb-12px">
+          {/* <p className="text-violet-500 text-16 font-semibold mb-12px">
             Subscribe to our Newsletter
           </p>
 
@@ -136,7 +136,7 @@ export const Footer = () => {
             frameBorder="0"
             scrolling="no"
             className="m-0 rounded-0 bg-transparent max-w-300px w-full mb-24px"
-          ></iframe>
+          ></iframe> */}
          
 
           <p className="text-violet-500 text-16 font-semibold mb-12px">

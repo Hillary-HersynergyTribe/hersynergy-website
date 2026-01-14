@@ -31,10 +31,10 @@ const menuItems = [
       },
     ],
   },
-  {
-    name: "Newsletter",
-    route: "/#newsletter",
-  },
+  // {
+  //   name: "Newsletter",
+  //   route: "/#newsletter",
+  // },
   {
     name: "Get Involved",
     children: [
